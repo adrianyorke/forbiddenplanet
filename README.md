@@ -15,29 +15,17 @@
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
 
 ## 1. Introduction
-Intro
-2
-3
-4
-5
-6
+The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
 
 ## 2. Preparation
-Prep
-2
-3
-4
-5
-6
+### 2.1 Installation of Python
+### 2.2 Installation of Robot Framework
+### 2.3 Installation of Robot Framework Database Library
+### 2.4 Clone github repository for participants that wish to follow along
 
-<a name="toc_3"></a>
 ## 3. Python Database API Specification v2.0
-DB API Spec 2.0
-2
-3
-4
-5
-6
+### 3.1 [PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
+### 3.2 [A 20-minute introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 
 ## 4. Robot Framework Database Library (External)
 RF DB Lib
