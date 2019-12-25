@@ -1,5 +1,6 @@
-# TEST AUTOMATION FOR THE ENTERPRISE DATA WAREHOUSE OR TEACHING AN OLD DOG NEW TRICKS!
-## Robby the Robot prepares for RoboCon2020
+# [RoboCon 2020 Workshops](https://robocon.io/#workshops): TEST AUTOMATION FOR THE ENTERPRISE DATA WAREHOUSE OR TEACHING AN OLD DOG NEW TRICKS!
+
+## Robby the Robot is ready for RoboCon2020
 ![Robby the Robot](src/images/Forbiddenplanetposter.jpg)
 
 # Table of Contents
@@ -15,28 +16,73 @@
 
 ## 1. Introduction
 Intro
+2
+3
+4
+5
+6
 
 ## 2. Preparation
 Prep
+2
+3
+4
+5
+6
 
 <a name="toc_3"></a>
 ## 3. Python Database API Specification v2.0
 DB API Spec 2.0
+2
+3
+4
+5
+6
 
 ## 4. Robot Framework Database Library (External)
 RF DB Lib
+2
+3
+4
+5
+6
 
 ## 5. Robot Framework Testing with Teradata
 Testing with Teradata
+2
+3
+4
+5
+6
 
 ## 6. Teradata Database Library (in-house development @ OP)
 Teradata Database Library
+2
+3
+4
+5
+6
 
 ## 7. Test Automation with Jenkins CI
 CI
+2
+3
+4
+5
+6
 
 ## 8. IBM InfoSphere DataStage Library (in-house development @ OP)
 DataStage
+2
+3
+4
+5
+6
 
 ## 9. The future - what are we working on next @ OP?
 Future
+2
+3
+4
+5
+6
