@@ -7,6 +7,8 @@
 1. [Introduction](#1-introduction)
 2. [Preparation](#2-preparation)
 3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)
+    3.1 [PEP 249 -- Python Database API Specification v2.0](#31-pep-249----python-database-api-specification-v20)
+    3.2 [A 20-minute introduction to DB-API2](#32-a-20-minute-introduction-to-db-api2)
 4. [Robot Framework Database Library (External)](#4-robot-framework-database-library-external)
 5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)
