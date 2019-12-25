@@ -21,10 +21,14 @@ The concept of data warehousing dates back to the late 1980s so you would be for
 
 ## 2. Preparation
 ### 2.1 Installation of Python
+* Python 2 vs Python 3
+* `$ python --version`
 ### 2.2 Installation of Robot Framework
+* `$ pip install --upgrade robotframework`
 ### 2.3 Installation of Robot Framework Database Library
+* `$ pip install --upgrade robotframework-database-library`
 ### 2.4 Clone github repository for participants that wish to follow along
-
+* `$ git clone https://github.com/adrianyorke/forbiddenplanet`
 ## 3. Python Database API Specification v2.0
 ### 3.1 [PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
 ### 3.2 [A 20-minute introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
