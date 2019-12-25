@@ -6,14 +6,12 @@
 1. [Introduction](#1-introduction)
 2. [Preparation](#2-preparation)
 3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)
-4. [Robot Framework Database Library (External)](4-robot-framework-database-library-external)
-5. [Robot Framework Testing with Teradata](5-robot-framework-testing-with-teradata)
-6. [Teradata Database Library (in-house development @ OP)](6-teradata-database-library-in-house-development--op)
-7. [Test Automation with Jenkins CI](7-test-automation-with-jenkins-ci)
-8. [IBM InfoSphere DataStage Library (in-house development @ OP)](8-ibm-infosphere-datastage-library-in-house-development--op
-)
-9. [The future - what are we working on next @ OP?](9-the-future---what-are-we-working-on-next--op
-)
+4. [Robot Framework Database Library (External)](#4-robot-framework-database-library-external)
+5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)
+6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)
+7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)
+8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)
+9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
 
 ## 1. Introduction
 Intro
