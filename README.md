@@ -6,9 +6,9 @@
 # Table of Contents
 1. [Introduction](#1-introduction)
 2. [Preparation](#2-preparation)
-3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)
-* 3.1 [PEP 249 -- Python Database API Specification v2.0](#31-pep-249----python-database-api-specification-v20)
-* 3.2 [A 20-minute introduction to DB-API2](#32-a-20-minute-introduction-to-db-api2)
+3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)\
+   3.1 [PEP-249](#31-pep-249)\
+   3.2 [A brief introduction to DB-API2](#32-a-brief-introduction-to-db-api2)
 4. [Robot Framework Database Library (External)](#4-robot-framework-database-library-external)
 5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)
@@ -17,9 +17,11 @@
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
 
 ## 1. Introduction
-The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain.
+The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
 
-OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
+[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java. The [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
+
+Database Library contains utilities meant for Robot Framework's usage. This can allow you to query your database after an action has been made to verify the results.
 
 ## 2. Preparation
 ### 2.1 Installation of Python
@@ -47,11 +49,13 @@ There are two main methods: using pip or installing the latest version from sour
 `$ pip install robotframework-database-library`
 ### 2.4 Clone git hub repository for participants that wish to follow along
 `$ git clone https://github.com/adrianyorke/forbiddenplanet`
+
 ## 3. Python Database API Specification v2.0
-### 3.1 PEP 249 -- Python Database API Specification v2.0
+### 3.1 PEP-249
 [PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
-### 3.2 A 20-minute introduction to DB-API2
-[A 20-minute introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
+### 3.2 A brief introduction to DB-API2
+[A brief introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
+
 ## 4. Robot Framework Database Library (External)
 RF DB Lib
 2
