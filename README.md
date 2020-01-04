@@ -13,9 +13,12 @@
 3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)\
    3.1 [PEP-249](#31-pep-249)\
    3.2 [A brief introduction to DB-API2](#32-a-brief-introduction-to-db-api2)
-4. [Robot Framework Database Library (External)](#4-robot-framework-database-library-external)
-5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)
-6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)
+4. [Robot Framework Database Library (External)](#4-robot-framework-database-library-external)\
+   4.1 [GitHub Repository](#41-github-repository)\
+   4.2 [API Documentation](#42-api-documentation)\
+   4.3 [List of Interfaces](#43-list-of-interfaces)
+5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)\
+6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)
 8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
@@ -30,9 +33,9 @@ Database Library contains utilities meant for Robot Framework's usage. This can 
 ## 2. Preparation
 ### 2.1 Installation of Python and pip
 #### Python 2 vs Python 3
-Which version?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
-Quite simply, you should use Python 3 going forward.
-Python 2 is End of Life and the final release will be April 2020 and after that date will receive no further official report.
+Which version of Python should I use?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
+Quite simply, you should be using Python 3 going forward.  Any existing Python 2 code should be converted to Python 3 as soon as possible which might take some time for large projects.
+Python 2 is becoming "End of Life" and the final release will be April 2020. After that date Python 2 will receive no further official support and you should expect the community to gradually drop support for Python 2.
 #### Check which versions of Python and pip (The Python Package Installer) are installed:
 `$ python3 --version`\
 `$ pip3 --version`
@@ -52,7 +55,7 @@ There are two main methods: using pip or installing the latest version from sour
 #### Install using pip:
 `$ pip install robotframework-database-library`
 ### 2.4 Clone GitHub repository for this workshop
-#### Clone the GitHub repository which contains workshop documentation and examples:
+#### For those that wish to follow along, clone the GitHub repository which contains workshop documentation and examples:
 `$ git clone https://github.com/adrianyorke/forbiddenplanet`
 
 ## 3. Python Database API Specification v2.0
@@ -63,7 +66,7 @@ There are two main methods: using pip or installing the latest version from sour
 
 ## 4. Robot Framework Database Library (External)
 ### 4.1 GitHub Repository
-The [GitHub Repository](https://github.com/franz-see/Robotframework-Database-Library) contains code and sample test scripts.
+The [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library) GitHub repository contains code and sample test scripts.
 ### 4.2 API Documentation
 The [API Documentation](https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html) lists the keywords available in Robot Framework for interactions with databases.
 ### 4.3 List of Interfaces
