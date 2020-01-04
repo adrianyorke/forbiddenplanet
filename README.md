@@ -5,7 +5,11 @@
 
 # Table of Contents
 1. [Introduction](#1-introduction)
-2. [Preparation](#2-preparation)
+2. [Preparation](#2-preparation)\
+   2.1 [Installation of Python and pip](#installation-of-python-and-pip)\
+   2.2 [Installation of Robot Framework]\
+   2.3 [Installation of Robot Framework Database Library]\
+   2.4 [Clone GitHub repository for this workshop]
 3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)\
    3.1 [PEP-249](#31-pep-249)\
    3.2 [A brief introduction to DB-API2](#32-a-brief-introduction-to-db-api2)
@@ -24,7 +28,7 @@ The concept of data warehousing dates back to the late 1980s so you would be for
 Database Library contains utilities meant for Robot Framework's usage. This can allow you to query your database after an action has been made to verify the results.
 
 ## 2. Preparation
-### 2.1 Installation of Python
+### 2.1 Installation of Python and pip
 #### Python 2 vs Python 3
 Which version?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
 Quite simply, you should use Python 3 going forward.
@@ -41,13 +45,14 @@ Installation of Robot Framework is documented [here](https://github.com/robotfra
 There are two main methods: using pip or installing the latest version from source code.
 #### Install using pip:
 `$ pip install robotframework`
-#### Install by git cloning the repository from git hub and run setup.py:
+#### Install by git cloning the repository from GitHub and run setup.py:
 `$ git clone https://github.com/robotframework/robotframework.git`
 
 ### 2.3 Installation of Robot Framework Database Library
 #### Install using pip:
 `$ pip install robotframework-database-library`
-### 2.4 Clone git hub repository for participants that wish to follow along
+### 2.4 Clone GitHub repository for this workshop
+#### Clone the GitHub repository which contains workshop documentation and examples:
 `$ git clone https://github.com/adrianyorke/forbiddenplanet`
 
 ## 3. Python Database API Specification v2.0
