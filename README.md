@@ -17,22 +17,41 @@
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
 
 ## 1. Introduction
-The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
+The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain.
+
+OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
 
 ## 2. Preparation
 ### 2.1 Installation of Python
-* Python 2 vs Python 3
-* `$ python --version`
-### 2.2 Installation of Robot Framework
-* `$ pip install --upgrade robotframework`
-### 2.3 Installation of Robot Framework Database Library
-* `$ pip install --upgrade robotframework-database-library`
-### 2.4 Clone github repository for participants that wish to follow along
-* `$ git clone https://github.com/adrianyorke/forbiddenplanet`
-## 3. Python Database API Specification v2.0
-### 3.1 [PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
-### 3.2 [A 20-minute introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
+#### Python 2 vs Python 3
+Which version?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
+Quite simply, you should use Python 3 going forward.
+Python 2 is End of Life and the final release will be April 2020 and after that date will receive no further official report.
+#### Check which versions of Python and pip (The Python Package Installer) are installed:
+`$ python3 --version`\
+`$ pip3 --version`
+#### If necessary, install pip (The Python Package Installer):
+`$ sudo apt update`\
+`$ sudo apt install python3-pip`
 
+### 2.2 Installation of Robot Framework
+Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
+There are two main methods: using pip or installing the latest version from source code.
+#### Install using pip:
+`$ pip install robotframework`
+#### Install by git cloning the repository from git hub and run setup.py:
+`$ git clone https://github.com/robotframework/robotframework.git`
+
+### 2.3 Installation of Robot Framework Database Library
+#### Install using pip:
+`$ pip install robotframework-database-library`
+### 2.4 Clone git hub repository for participants that wish to follow along
+`$ git clone https://github.com/adrianyorke/forbiddenplanet`
+## 3. Python Database API Specification v2.0
+### 3.1 PEP 249 -- Python Database API Specification v2.0
+[PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
+### 3.2 A 20-minute introduction to DB-API2
+[A 20-minute introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 ## 4. Robot Framework Database Library (External)
 RF DB Lib
 2
