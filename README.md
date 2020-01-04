@@ -6,10 +6,10 @@
 # Table of Contents
 1. [Introduction](#1-introduction)
 2. [Preparation](#2-preparation)\
-   2.1 [Installation of Python and pip](#installation-of-python-and-pip)\
-   2.2 [Installation of Robot Framework]\
-   2.3 [Installation of Robot Framework Database Library]\
-   2.4 [Clone GitHub repository for this workshop]
+   2.1 [Installation of Python and pip](#21-installation-of-python-and-pip)\
+   2.2 [Installation of Robot Framework](#22-installation-of-robot-framework)\
+   2.3 [Installation of Robot Framework Database Library](#23-installation-of-robot-framework-database-library)\
+   2.4 [Clone GitHub repository for this workshop](#24-clone-github-repository-for-this-workshop)
 3. [Python Database API Specification v2.0](#3-python-database-api-specification-v20)\
    3.1 [PEP-249](#31-pep-249)\
    3.2 [A brief introduction to DB-API2](#32-a-brief-introduction-to-db-api2)
@@ -62,12 +62,12 @@ There are two main methods: using pip or installing the latest version from sour
 [A brief introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 
 ## 4. Robot Framework Database Library (External)
-RF DB Lib
-2
-3
-4
-5
-6
+### 4.1 GitHub Repository
+The [GitHub Repository](https://github.com/franz-see/Robotframework-Database-Library) contains code and sample test scripts.
+### 4.2 API Documentation
+The [API Documentation](https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html) lists the keywords available in Robot Framework for interactions with databases.
+### 4.3 List of Interfaces
+[List of Interfaces](https://wiki.python.org/moin/DatabaseInterfaces) documents the database interfaces that have already been implemented.  If your database is not listed you many need to create your own Robot Framework library to implement Robot Framework tests or RPA scripts.  If it is necessary to create your own library, please do consider sharing with the open source community by submitting a pull request.
 
 ## 5. Robot Framework Testing with Teradata
 Testing with Teradata
