@@ -88,9 +88,10 @@ There are two main methods: using pip or installing the latest version from sour
 
 ## 3. Python Database API Specification v2.0
 ### 3.1 PEP 249
-PEPs are Python Enhancement Proposals and they act as a method of defining and discussing new language features.
+PEPs (Python Enhancement Proposals) are the mechanism for defining and discussing new Python language features.
 [PEP 249](https://www.python.org/dev/peps/pep-0249/) introduces Python Database API Specification v2.0.
-It is important to remember that [PEP 249](https://www.python.org/dev/peps/pep-0249/) is only a specification.
+It is important to remember that [PEP 249](https://www.python.org/dev/peps/pep-0249/) is only a specification and does
+not define the technical implementation.
 ### 3.2 A brief introduction to DB-API2
 Here's the first paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
 > "This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
