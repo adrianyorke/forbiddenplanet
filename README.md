@@ -47,11 +47,11 @@ the London marathon!), carpentry & just being there for my daughter and helping 
 ### 1.3 Robot Framework
 Here's the introductory paragraph from robotframework.org:
 
-> [Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
+> “[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
 > acceptance test driven development (ATDD), and robotic process automation (RPA). It has easy-to-use tabular test data syntax
 > and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries implemented
 > either with Python or Java, and users can create new higher-level keywords from existing ones using the same syntax that
-> is used for creating test cases.
+> is used for creating test cases.”
 
 [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
@@ -81,7 +81,7 @@ further official support and you should expect the community to gradually drop s
 > `sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
-There are two main methods: using pip or installing the latest version from source code.
+There are two main methods: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
 > `pip3 install robotframework`
 #### For the latest development branch, install by git cloning the repository from GitHub and run setup.py:
@@ -102,9 +102,9 @@ not define the technical implementation.
 ### 3.2 A brief introduction to DB-API2
 Here's the introductory paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
 
-> "This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
+> “This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
 > this, we hope to achieve a consistency leading to more easily understood modules, code that is generally more portable
-> across databases, and a broader reach of database connectivity from Python."
+> across databases, and a broader reach of database connectivity from Python.”
 
 [A brief introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 
