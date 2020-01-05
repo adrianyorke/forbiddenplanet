@@ -3,7 +3,10 @@
 ![Robby the Robot](src/images/Forbiddenplanetposter.jpg)
 
 # Table of Contents
-1. [Introduction](#1-introduction)
+1. [Introduction](#1-introduction)\
+   1.1 [Presenter Bio](#11-presenter-bio)\
+   1.2 [Robot Framework](#12-robot-framework)\
+   1.3 [Robot Framework Database Library](#13-robot-framework-database-library) 
 2. [Preparation](#2-preparation)\
    2.1 [Installation of Python and pip](#21-installation-of-python-and-pip)\
    2.2 [Installation of Robot Framework](#22-installation-of-robot-framework)\
@@ -26,21 +29,31 @@
 The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation
 has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework.
 You really can teach an old dog new tricks!
-
+### 1.1 Presenter Bio
+* Adrian Yorke is a Senior Data Specialist and DevOps Engineer at OP, one of Finland's largest and oldest Financial groups.
+* Driving force behind the adoption of DevOps and Test Automation using Robot Framework in the Data Warehousing tribe.
+* During 2019 authored and presented a Python Summer Camp workshop series.
+* Tech interests: Python, Raspberry Pi & Open Source projects. Recently I've been studying machine learning and data science.
+* When I'm not being a geek: swimming (former national championship swimmer), long distance running (I actually completed
+the London marathon!), carpentry & just being there for my daughter and helping her grow.
+### 1.2 Robot Framework
 [Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
 acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it
-can be extended easily with libraries implemented using Python or Java. The [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+can be extended easily with libraries implemented using Python or Java. The
+[Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
-
-Database Library contains utilities (keywords) meant for Robot Framework's usage. This can allow you to query your database after an
-action has been made to verify the results.
+### 1.3 Robot Framework Database Library
+Database Library contains utilities (keywords) meant for Robot Framework's usage. This can allow you to query your
+database after an action has been made to verify the results.
 
 ## 2. Preparation
 ### 2.1 Installation of Python and pip
 #### Python 2 vs Python 3
 Which version of Python should I use?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
-Quite simply, you should be using Python 3 going forward.  Any existing Python 2 code should be converted to Python 3 as soon as possible which might take some time for large projects.
-Python 2 is becoming "End of Life" and the final release will be April 2020. After that date Python 2 will receive no further official support and you should expect the community to gradually drop support for Python 2.
+Quite simply, you should be using Python 3 going forward.  Any existing Python 2 code should be converted to Python 3 as
+soon as possible which might take some time for large projects.
+Python 2 is becoming "End of Life" and the final release will be April 2020. After that date Python 2 will receive no
+further official support and you should expect the community to gradually drop support for Python 2.
 #### Check which versions of Python and pip (The Python Package Installer) are installed:
 `$ python3 --version`\
 `$ pip3 --version`
@@ -84,7 +97,14 @@ the keywords available in Robot Framework for interactions with databases.
 been implemented.  If your database is not listed you many need to create your own Robot Framework library to implement
 Robot Framework keywords for testing or RPA scripts.  If it is necessary to create your own library, please do consider
 sharing with the open source community by submitting a pull request.
-
+### 4.4 Review the tests found in test subfolder
+### 4.5 Why SQLite?
+SQLite is a fully featured database that ships by default with installations of Python.  There is no server installation or configuration
+and the whole database is implemented using only a single file.  Despite this simplicity of design, SQLite is surprising feature rich
+and provides and excellent way of learning about database and SQL.  However, SQLite is not recommended for mission-critical Production
+implementations.  You should be looking at more robust server database technology such as PostgreSQL for these use cases.
+### 4.6 Work through our first robot test suite
+Work through SQLite3_DB_Tests.robot and check our installation is working
 ## 5. Robot Framework Testing with Teradata
 Testing with Teradata
 2
