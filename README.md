@@ -27,10 +27,15 @@
    4.7 [Work through our first robot test suite](#47-work-through-our-first-robot-test-suite)
 5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)\
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
-7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)
-8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)
-9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
-
+7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
+8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
+9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)\
+   9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitsmoke-testing)\
+   9.2 [Jira & ServiceNow RPA Libraries](#92-jira--servicenow-rpa-libraries)\
+   9.3 [AWS Cloud Workflow](#93-aws-cloud-workflow)\
+   9.4 [Control-M Workload Automation](#94-control-m-workload-automation)\
+   9.5 [Kibana Dashboard Integration](#95-kibana-dashboard-integration)\
+   9.6 [Integrating Machine Learning and Data Science](#96-integrating-machine-learning-and-data-science)
 
 ## 1. Introduction
 ### 1.1 Abstract
@@ -77,6 +82,10 @@ further official support and you should expect the community to gradually drop s
 > `python3 --version`\
 > `pip3 --version`
 #### If necessary, install pip (The Python Package Installer):
+**Check where this quote comes from and define VENV with links**
+> In most cases, you should use pip within a virtual environment only. Python Virtual Environments allows you to install
+> Python modules in an isolated location for a specific project, rather than being installed globally.
+> This way you do not have to worry about affecting other Python projects.
 > `sudo apt update`\
 > `sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
@@ -172,9 +181,50 @@ DataStage
 6
 
 ## 9. The future - what are we working on next @ OP?
-Future
-2
-3
-4
-5
-6
+### 9.1 Fully Automated Unit/Smoke Testing
+Blah
+### 9.2 Jira & ServiceNow RPA Libraries
+Blah
+### 9.3 AWS Cloud Workflow
+Blah
+### 9.4 Control-M Workload Automation
+Blah
+### 9.5 Kibana Dashboard Integration
+Here's the introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
+
+> “Kibana is an open source data visualization dashboard for Elasticsearch. It provides visualization capabilities on top
+> of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps
+> on top of large volumes of data.”
+
+When we automate tests using the Jenkins Integration Test instance at OP, the Robot Framework logs are automatically
+exported to Elasticsearch.  Kibana sits on  top of Elasticsearch so we have extensive possiblities to visualize
+the status of test automation.
+
+### 9.6 Integrating Machine Learning and Data Science
+The QA & Testing domain is quite prescriptive.  We define 100s of 1000s  of tests and rely on humans to decide which tests
+would be most relevant in a given scenario.  The humans use their past observations, general experience and feed that back
+in to make decisions about which tests to run.  This challenge is highly suited to machine learning.
+
+Contemporary Continuous Deployment pipelines require more intelligent, focused testing.  In the early days, it used to
+acceptable to simply rerun all tests for each change or release and look for any failures.  Now we deploy many times
+per day so we need to focus our efforts in the right area rather than simply "blanket testing".
+This is something Machine Learning could really help with.
+
+Here's a reminder of the definition of Machine Learning:
+
+> “Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically
+> learn and improve from experience without being explicitly programmed.”
+
+Supervised ML is particularly relevant in the testing domain:
+
+> “Supervised machine learning algorithms can apply what has been learned in the past to new data using labeled examples
+> to predict future events.”
+> Source: https://expertsystem.com/machine-learning-definition/
+
+It makes sense to use Jupyter (& underlying IPython kernal) as an enabling framework for experimentation in the QA/Testing domain.
+Data science and data analysis techniques especially when applied to historical Robot Framework logs are highly relevant
+and the core DS packages, especially: pandas, numpy, scipi, scikit-learn.
+Also matplotlib & seaborn for media quality, inline visualizations. 
+
+Most data source are not clean, including Robot Framework logs.  This requires an iterative, experimentation approach when
+developing suitable models.  Jupyter Notebooks are perfect for this and are my primary tool when developing more complex logic.
