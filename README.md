@@ -45,11 +45,18 @@ You really can teach an old dog new tricks!
 * When I'm not being a geek: swimming (former British national championship swimmer), long distance running (I actually completed
 the London marathon!), carpentry & just being there for my daughter and helping her grow.
 ### 1.3 Robot Framework
-[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
-acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it
-can be extended easily with libraries implemented using Python or Java. The
+Here's the introductory paragraph from robotframework.org:
+
+> [Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
+> acceptance test driven development (ATDD), and robotic process automation (RPA). It has easy-to-use tabular test data syntax
+> and it utilizes the keyword-driven testing approach. Its testing capabilities can be extended by test libraries implemented
+> either with Python or Java, and users can create new higher-level keywords from existing ones using the same syntax that
+> is used for creating test cases.
+
 [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
+
+
 ### 1.4 Robot Framework Database Library
 Database Library contains utilities (keywords) meant for Robot Framework's usage. This can allow you to query your
 database after an action has been made to verify the results.
@@ -93,7 +100,8 @@ PEPs (Python Enhancement Proposals) are the mechanism for defining and discussin
 It is important to remember that [PEP 249](https://www.python.org/dev/peps/pep-0249/) is only a specification and does
 not define the technical implementation.
 ### 3.2 A brief introduction to DB-API2
-Here's the first paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
+Here's the introductory paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
+
 > "This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
 > this, we hope to achieve a consistency leading to more easily understood modules, code that is generally more portable
 > across databases, and a broader reach of database connectivity from Python."
