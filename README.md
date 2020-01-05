@@ -5,9 +5,10 @@
 
 # Table of Contents
 1. [Introduction](#1-introduction)\
-   1.1 [Presenter Bio](#11-presenter-bio)\
-   1.2 [Robot Framework](#12-robot-framework)\
-   1.3 [Robot Framework Database Library](#13-robot-framework-database-library) 
+   1.1 [Abstract](#11-abstract)\
+   1.1 [Presenter Bio](#12-presenter-bio)\
+   1.2 [Robot Framework](#13-robot-framework)\
+   1.3 [Robot Framework Database Library](#14-robot-framework-database-library) 
 2. [Preparation](#2-preparation)\
    2.1 [Clone GitHub repository for this workshop](#21-clone-github-repository-for-this-workshop)\
    2.2 [Installation of Python and pip](#22-installation-of-python-and-pip)\
@@ -31,23 +32,24 @@
 
 
 ## 1. Introduction
+### 1.1 Abstract
 The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation
 has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework.
 You really can teach an old dog new tricks!
-### 1.1 Presenter Bio
+### 1.2 Presenter Bio
 * Adrian Yorke is a Senior Data Specialist and DevOps Engineer at OP, one of Finland's largest and oldest Financial groups.
 * Driving force behind the adoption of DevOps and Test Automation using Robot Framework in the Data Warehousing tribe.
 * During 2019 authored and presented a Python Summer Camp workshop series.
 * Tech interests: Python, Raspberry Pi & Open Source projects. Recently I've been studying machine learning and data science.
 * When I'm not being a geek: swimming (former British national championship swimmer), long distance running (I actually completed
 the London marathon!), carpentry & just being there for my daughter and helping her grow.
-### 1.2 Robot Framework
+### 1.3 Robot Framework
 [Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
 acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it
 can be extended easily with libraries implemented using Python or Java. The
 [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
 contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
-### 1.3 Robot Framework Database Library
+### 1.4 Robot Framework Database Library
 Database Library contains utilities (keywords) meant for Robot Framework's usage. This can allow you to query your
 database after an action has been made to verify the results.
 
