@@ -181,8 +181,24 @@ DataStage
 6
 
 ## 9. The future - what are we working on next @ OP?
-### 9.1 Fully Automated Unit/Smoke Testing
-Blah
+### 9.1 Fully Automated Unit/Functional Testing
+During the past 2 years, developers have been manually creating Robot Framework unit test suites for each solution they
+deploy to production.  The testing team have been manually creating additional functional test suites for each solution.
+These test suites are committed to Subversion so Jenkins can acquire and execute the tests automatically.
+
+Looking at the unit test suites, it is quite reasonable to state that the tests could be automatically generated based
+on information we already have for the solution contained within the deployment package and Teradata database catalog tables (DBC).
+We have already created a Proof of Concept Python solution that automatically creates a unit test suite.  Furthermore, it's
+possible to include many more detailed tests that the human writer would not have time to perform.  For example, precise
+column definitions of which there can be many 100s.
+
+When we consider Functional Testing, many of the tests are checking things like Primary Index violations and Foreign Key
+matches.  Again, using the information we already have in our mappings data we can automatically generate suitable
+functional tests using existing keywords.
+
+In summary, we already have the information we need to fully automate the creation of unit test and function test suites
+and this is something we will be focussing on during 2020.
+
 ### 9.2 Jira & ServiceNow RPA Libraries
 Blah
 ### 9.3 AWS Cloud Workflow
