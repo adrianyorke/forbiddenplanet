@@ -1,6 +1,5 @@
-# [RoboCon 2020 Workshops](https://robocon.io/#workshops): TEST AUTOMATION FOR THE ENTERPRISE DATA WAREHOUSE OR TEACHING AN OLD DOG NEW TRICKS!
-
-## Robby the Robot is ready for RoboCon2020
+# [RoboCon 2020 Workshops](https://robocon.io/#workshops): [TEST AUTOMATION FOR THE ENTERPRISE DATA WAREHOUSE OR TEACHING AN OLD DOG NEW TRICKS!](https://robocon.io/#test-automation-for-the-enterprise-data-warehouse-or-teaching-an-old-dog-new-tricks!)
+## Robby the Robot is ready for RoboCon2020 - are you?
 ![Robby the Robot](src/images/Forbiddenplanetposter.jpg)
 
 # Table of Contents
@@ -24,11 +23,17 @@
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)
 
 ## 1. Introduction
-The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework. You really can teach an old dog new tricks!
+The concept of data warehousing dates back to the late 1980s so you would be forgiven for thinking that test automation
+has little to offer this domain. OP needed to find a way of improving the quality of DW solutions: enter Robot Framework.
+You really can teach an old dog new tricks!
 
-[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing, acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it can be extended easily with libraries implemented using Python or Java. The [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html) contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
+[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
+acceptance test driven development (ATDD), and robotic process automation (RPA). It has simple plain text syntax and it
+can be extended easily with libraries implemented using Python or Java. The [Robot Framework User Guide](http://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html)
+contains all you need to get started and it also covers more advanced topics such as development of your own test libraries.
 
-Database Library contains utilities meant for Robot Framework's usage. This can allow you to query your database after an action has been made to verify the results.
+Database Library contains utilities (keywords) meant for Robot Framework's usage. This can allow you to query your database after an
+action has been made to verify the results.
 
 ## 2. Preparation
 ### 2.1 Installation of Python and pip
@@ -65,12 +70,20 @@ There are two main methods: using pip or installing the latest version from sour
 [A brief introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 
 ## 4. Robot Framework Database Library (External)
+Database Library is a [Robot Framework Test Library](https://robotframework.org/#libraries) classed as non-standard or
+external library. It was originally designed and implemented by [Franz Allan Valencia See](https://github.com/franz-see)
+and is currently maintained by [Jerry Schneider](https://github.com/jerry57).
 ### 4.1 GitHub Repository
-The [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library) GitHub repository contains code and sample test scripts.
+The [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library) GitHub repository
+contains code and sample test scripts.
 ### 4.2 API Documentation
-The [API Documentation](https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html) lists the keywords available in Robot Framework for interactions with databases.
+The [API Documentation](https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html) lists
+the keywords available in Robot Framework for interactions with databases.
 ### 4.3 List of Interfaces
-[List of Interfaces](https://wiki.python.org/moin/DatabaseInterfaces) documents the database interfaces that have already been implemented.  If your database is not listed you many need to create your own Robot Framework library to implement Robot Framework tests or RPA scripts.  If it is necessary to create your own library, please do consider sharing with the open source community by submitting a pull request.
+[List of Interfaces](https://wiki.python.org/moin/DatabaseInterfaces) documents the database interfaces that have already
+been implemented.  If your database is not listed you many need to create your own Robot Framework library to implement
+Robot Framework keywords for testing or RPA scripts.  If it is necessary to create your own library, please do consider
+sharing with the open source community by submitting a pull request.
 
 ## 5. Robot Framework Testing with Teradata
 Testing with Teradata
