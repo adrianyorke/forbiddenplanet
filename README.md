@@ -23,7 +23,8 @@
    4.3 [List of Interfaces](#43-list-of-interfaces)\
    4.4 [Review the Robot Framework test suites located in test folder](#44-review-the-robot-framework-test-suites-located-in-test-folder)\
    4.5 [Why SQLite?](#45-why-sqlite)\
-   4.6 [Work through our first robot test suite](#46-work-through-our-first-robot-test-suite)
+   4.6 [DB-API 2.0 for SQLite](#46-db-api-20-for-sqlite)
+   4.7 [Work through our first robot test suite](#47-work-through-our-first-robot-test-suite)
 5. [Robot Framework Testing with Teradata](#5-robot-framework-testing-with-teradata)\
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)
@@ -115,7 +116,9 @@ SQLite is a fully featured database that ships by default with installations of 
 and the whole database is implemented using only a single file.  Despite this simplicity of design, SQLite is surprising feature rich
 and provides and excellent way of learning about database and SQL.  However, SQLite is not recommended for mission-critical Production
 implementations.  You should be looking at more robust server database technology such as PostgreSQL for these use cases.
-### 4.6 Work through our first robot test suite
+### 4.6 DB-API 2.0 for SQLite
+[DB-API 2.0 interface for SQLite databases](https://docs.python.org/2/library/sqlite3.html)
+### 4.7 Work through our first robot test suite
 Work through [SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
 and check our installation is working.
 
