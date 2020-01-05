@@ -205,12 +205,12 @@ The QA & Testing domain is quite prescriptive.  We define 100s of 1000s  of test
 would be most relevant in a given scenario.  The humans use their past observations, general experience and feed that back
 in to make decisions about which tests to run.  This challenge is highly suited to machine learning.
 
-Contemporary Continuous Deployment pipelines require more intelligent, focused testing.  In the early days, it used to
+Contemporary Continuous Deployment pipelines require more intelligent, focused testing.  In the early days, it used to be
 acceptable to simply rerun all tests for each change or release and look for any failures.  Now we deploy many times
-per day so we need to focus our efforts in the right area rather than simply "blanket testing".
+per day so we need to focus our efforts in the right area rather than simply "blanket testing" each patch.
 This is something Machine Learning could really help with.
 
-Here's a reminder of the definition of Machine Learning:
+Here's a reminder of the [definition of Machine Learning](https://expertsystem.com/machine-learning-definition/):
 
 > “Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically
 > learn and improve from experience without being explicitly programmed.”
@@ -219,7 +219,6 @@ Supervised ML is particularly relevant in the testing domain:
 
 > “Supervised machine learning algorithms can apply what has been learned in the past to new data using labeled examples
 > to predict future events.”
-> Source: https://expertsystem.com/machine-learning-definition/
 
 It makes sense to use Jupyter (& underlying IPython kernal) as an enabling framework for experimentation in the QA/Testing domain.
 Data science and data analysis techniques especially when applied to historical Robot Framework logs are highly relevant
