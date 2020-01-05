@@ -6,9 +6,9 @@
 # Table of Contents
 1. [Introduction](#1-introduction)\
    1.1 [Abstract](#11-abstract)\
-   1.1 [Presenter Bio](#12-presenter-bio)\
-   1.2 [Robot Framework](#13-robot-framework)\
-   1.3 [Robot Framework Database Library](#14-robot-framework-database-library) 
+   1.2 [Presenter Bio](#12-presenter-bio)\
+   1.3 [Robot Framework](#13-robot-framework)\
+   1.4 [Robot Framework Database Library](#14-robot-framework-database-library) 
 2. [Preparation](#2-preparation)\
    2.1 [Clone GitHub repository for this workshop](#21-clone-github-repository-for-this-workshop)\
    2.2 [Installation of Python and pip](#22-installation-of-python-and-pip)\
