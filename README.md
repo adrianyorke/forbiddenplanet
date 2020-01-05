@@ -58,7 +58,7 @@ database after an action has been made to verify the results.
 ## 2. Preparation
 ### 2.1 Clone GitHub repository for this workshop
 #### For those that wish to follow along, clone the GitHub repository which contains workshop documentation and examples:
-`$ git clone https://github.com/adrianyorke/forbiddenplanet`
+> `git clone https://github.com/adrianyorke/forbiddenplanet`
 ### 2.2 Installation of Python and pip
 #### Python 2 vs Python 3
 Which version of Python should I use?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
@@ -67,29 +67,36 @@ soon as possible which might take some time for large projects.
 Python 2 is becoming "End of Life" and the final release will be April 2020. After that date Python 2 will receive no
 further official support and you should expect the community to gradually drop support for Python 2.
 #### Check which versions of Python and pip (The Python Package Installer) are installed:
-`$ python3 --version`\
-`$ pip3 --version`
+> `python3 --version`\
+> `pip3 --version`
 #### If necessary, install pip (The Python Package Installer):
-`$ sudo apt update`\
-`$ sudo apt install python3-pip`
+> `sudo apt update`\
+> `sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods: using pip or installing the latest version from source code.
 #### Install using pip:
-`$ pip3 install robotframework`
+> `pip3 install robotframework`
 #### For the latest development branch, install by git cloning the repository from GitHub and run setup.py:
-`$ git clone https://github.com/robotframework/robotframework.git`\
-`$ cd robotframework`\
-`$ python3 setup.py install`
+> `git clone https://github.com/robotframework/robotframework.git`\
+> `cd robotframework`\
+> `python3 setup.py install`
 ### 2.4 Installation of Robot Framework Database Library
 #### Install using pip:
-`$ pip3 install robotframework-database-library`
+> `pip3 install robotframework-database-library`
 
 
 ## 3. Python Database API Specification v2.0
-### 3.1 PEP-249
-[PEP 249 -- Python Database API Specification v2.0](https://www.python.org/dev/peps/pep-0249/)
+### 3.1 PEP 249
+PEPs are Python Enhancement Proposals and they act as a method of defining and discussing new language features.
+[PEP 249](https://www.python.org/dev/peps/pep-0249/) introduces Python Database API Specification v2.0.
+It is important to remember that [PEP 249](https://www.python.org/dev/peps/pep-0249/) is only a specification.
 ### 3.2 A brief introduction to DB-API2
+Here's the first paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
+> "This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
+> this, we hope to achieve a consistency leading to more easily understood modules, code that is generally more portable
+> across databases, and a broader reach of database connectivity from Python."
+
 [A brief introduction to DB-API2](https://cewing.github.io/training.codefellows/lectures/day21/intro_to_dbapi2.html)
 
 
