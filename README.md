@@ -70,7 +70,7 @@ database after an action has been made to verify the results.
 ## 2. Preparation
 ### 2.1 Clone GitHub repository for this workshop
 #### For those that wish to follow along, clone the GitHub repository which contains workshop documentation and examples:
-> `git clone https://github.com/adrianyorke/forbiddenplanet`
+> `$ git clone https://github.com/adrianyorke/forbiddenplanet`
 ### 2.2 Installation of Python and pip
 #### Python 2 vs Python 3
 Which version of Python should I use?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
@@ -79,27 +79,28 @@ soon as possible which might take some time for large projects.
 Python 2 is becoming "End of Life" and the final release will be April 2020. After that date Python 2 will receive no
 further official support and you should expect the community to gradually drop support for Python 2.
 #### Check which versions of Python and pip (The Python Package Installer) are installed:
-> `python3 --version`\
-> `pip3 --version`
+> `$ python3 --version`\
+> `$ pip3 --version`
 #### If necessary, install pip (The Python Package Installer):
 **Check where this quote comes from and define VENV with links**
 > In most cases, you should use pip within a virtual environment only. Python Virtual Environments allows you to install
 > Python modules in an isolated location for a specific project, rather than being installed globally.
 > This way you do not have to worry about affecting other Python projects.
-> `sudo apt update`\
-> `sudo apt install python3-pip`
+
+> `$ sudo apt update`\
+> `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
-> `pip3 install robotframework`
+> `$ pip3 install robotframework`
 #### For the latest development branch, install by git cloning the repository from GitHub and run setup.py:
-> `git clone https://github.com/robotframework/robotframework.git`\
-> `cd robotframework`\
-> `python3 setup.py install`
+> `$ git clone https://github.com/robotframework/robotframework.git`\
+> `$ cd robotframework`\
+> `$ python3 setup.py install`
 ### 2.4 Installation of Robot Framework Database Library
 #### Install using pip:
-> `pip3 install robotframework-database-library`
+> `$ pip3 install robotframework-database-library`
 
 
 ## 3. Python Database API Specification v2.0
@@ -137,15 +138,48 @@ sharing with the open source community by submitting a pull request.
 Let's have a look at the [test](https://github.com/franz-see/Robotframework-Database-Library/tree/master/test) folder and
 explore some of the test suites available. 
 ### 4.5 Why SQLite?
-SQLite is a fully featured database that ships by default with installations of Python.  There is no server installation or configuration
-and the whole database is implemented using only a single file.  Despite this simplicity of design, SQLite is surprising feature rich
-and provides and excellent way of learning about database and SQL.  However, SQLite is not recommended for mission-critical Production
-implementations.  You should be looking at more robust server database technology such as PostgreSQL for these use cases.
+SQLite is a fully featured database that ships by default with the Python Standard Library and is implemented using C.
+There is no server installation or configuration and the whole relational database is implemented using only a single file.
+Despite this simplicity of design, SQLite is surprising feature rich and provides and excellent way of learning about
+database and SQL. To understand appropriate uses for SQLite I recommend reviewing the comprehensive
+[summary](https://www.sqlite.org/whentouse.html) at sqlite.org.
+
+Here are the opening statements from the sqlite.org summary:
+
+> “SQLite is not directly comparable to client/server SQL database engines such as MySQL, Oracle, PostgreSQL, or SQL Server
+> since SQLite is trying to solve a different problem.
+>
+> Client/server SQL database engines strive to implement a shared repository of enterprise data. They emphasize scalability,
+> concurrency, centralization, and control. SQLite strives to provide local data storage for individual applications and
+> devices. SQLite emphasizes economy, efficiency, reliability, independence, and simplicity.
+>
+> SQLite does not compete with client/server databases. SQLite competes with fopen().”
+
+SQLite is available on all Python installations and one of the appropriate uses mentioned in the sqlite.org summary is
+"Education and Training" so SQLite examples are a good place to begin our workshop training.
+
 ### 4.6 DB-API 2.0 for SQLite
 [DB-API 2.0 interface for SQLite databases](https://docs.python.org/2/library/sqlite3.html)
 ### 4.7 Work through our first robot test suite
 Work through [SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
 and check our installation is working.
+
+Here is a summary of database library keywords which we will be covering in the
+[SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
+in the order that they are used:
+* `Connect To Database Using Custom Params`
+* `Execute SQL String`
+* `Check If Exists In Database`
+* `Check If Not Exists In Database`
+* `Table Must Exist`
+* `Row Count Is 0`
+* `Row Count Is Equal To X`
+* `Row Count Is Less Than X`
+* `Row Count Is Greater Than X`
+* `Row Count`
+* `Description`
+* `Query`
+* `Delete All Rows From Table`
 
 
 ## 5. Robot Framework Testing with Teradata
@@ -231,7 +265,7 @@ Here's a reminder of the [definition of Machine Learning](https://expertsystem.c
 > “Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically
 > learn and improve from experience without being explicitly programmed.”
 
-Supervised ML is particularly relevant in the testing domain:
+Supervised Machine Learning is particularly relevant in the testing domain:
 
 > “Supervised machine learning algorithms can apply what has been learned in the past to new data using labeled examples
 > to predict future events.”
