@@ -95,21 +95,22 @@ Virtual environments are beyond the scope of this workshop, however, they are no
 recommended for any non-trivial development.  More information can be found in
 [The Python Tutorial](https://docs.python.org/3/tutorial/venv.html) documentation.
 
-##### Installing pip:
+#### Installing pip:
 > `$ sudo apt update`\
 > `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
-> `$ pip3 install robotframework`
+> `$ pip3 install robotframework`\
+> `$ python3 -m robot --version`
 #### For the latest development branch, install by git cloning the repository from GitHub and run setup.py:
 > `$ git clone https://github.com/robotframework/robotframework.git`\
 > `$ cd robotframework`\
 > `$ python3 setup.py install`
 ### 2.4 Installation of Robot Framework Database Library
 #### Install using pip:
-> `$ pip3 install robotframework-database-library`
+> `$ pip3 install robotframework-databaselibrary`
 
 
 ## 3. Python Database API Specification v2.0
