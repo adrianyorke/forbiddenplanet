@@ -136,6 +136,10 @@ and is currently maintained by [Jerry Schneider](https://github.com/jerry57).
 ### 4.1 GitHub Repository
 The [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library) GitHub repository
 contains code and sample test scripts.
+
+In order to run the Database Library test suites locally it is necessary to `git clone` the repository from GitHub:
+> `$ git clone https://github.com/franz-see/Robotframework-Database-Library.git`
+
 ### 4.2 API Documentation
 The [API Documentation](https://franz-see.github.io/Robotframework-Database-Library/api/0.5/DatabaseLibrary.html) lists
 the keywords available in Robot Framework for interactions with databases.
