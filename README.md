@@ -140,7 +140,7 @@ explore some of the test suites available.
 ### 4.5 Why SQLite?
 SQLite is a fully featured database that ships by default with the Python Standard Library and is implemented using C.
 There is no server installation or configuration and the whole relational database is implemented using only a single file.
-Despite this simplicity of design, SQLite is surprising feature rich and provides and excellent way of learning about
+Despite this simplicity of design, SQLite is surprising feature rich and provides an excellent way of learning about
 database and SQL. To understand appropriate uses for SQLite I recommend reviewing the comprehensive
 [summary](https://www.sqlite.org/whentouse.html) at sqlite.org.
 
