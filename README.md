@@ -81,12 +81,21 @@ further official support and you should expect the community to gradually drop s
 #### Check which versions of Python and pip (The Python Package Installer) are installed:
 > `$ python3 --version`\
 > `$ pip3 --version`
-#### If necessary, install pip (The Python Package Installer):
-**Check where this quote comes from and define VENV with links**
-> In most cases, you should use pip within a virtual environment only. Python Virtual Environments allows you to install
+#### If required, install pip (The Python Package Installer):
+
+pip is a tool for installing packages from the [Python Package Index](https://pypi.org/) (also know as The Cheeseshop).
+If your organization has blocked access to pypi.org, your company will probably be using an internally-managed, package
+index, e.g. [Artifactory](https://jfrog.com/artifactory/).
+
+> In most cases, you should use pip within a virtual environment only. Python virtual environments allow you to install
 > Python modules in an isolated location for a specific project, rather than being installed globally.
 > This way you do not have to worry about affecting other Python projects.
 
+Virtual environments are beyond the scope of this workshop, however, they are not difficult to create or use and they are
+recommended for any non-trivial development.  More information can be found in
+[The Python Tutorial](https://docs.python.org/3/tutorial/venv.html) documentation.
+
+##### Installing pip:
 > `$ sudo apt update`\
 > `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
