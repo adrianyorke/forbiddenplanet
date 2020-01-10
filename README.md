@@ -248,7 +248,16 @@ In summary, we already have the information we need to fully automate the creati
 and this is something we will be focussing on during 2020.
 
 ### 9.2 Jira & ServiceNow RPA Libraries
-Blah
+[Jira](https://www.atlassian.com/software/jira) & [ServiceNow](https://www.servicenow.com/) are popular platforms for implementing digital workflows across the enterprise.  Both services offer RESTful JSON APIs as a way of automating ticketing  workflows, especially creating and updating issues in response to events that occur in the continuous delivery pipeline, for example.
+
+Robot Framework already offers the [RESTinstance Library](https://github.com/asyrjasalo/RESTinstance) which could be used as a base for higher level user keywords.
+
+> RESTinstance relies on Robot Framework's language-agnostic, clean and minimal syntax, for API tests. It is neither tied to
+> any particular programming language nor development framework. Using RESTinstance requires little, if any, programming
+> knowledge. It builts on long-term technologies with well established communities, such as HTTP, JSON (Schema),
+> Swagger/OpenAPI and Robot Framework.
+
+Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.  We already have base Python classes that have implemented some of the standard workflows so it would be simple to port these across to new Robot Framework libraries that could be used by a wider audience.
 ### 9.3 AWS Cloud Workflow
 Blah
 ### 9.4 Control-M Workload Automation
