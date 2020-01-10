@@ -248,27 +248,37 @@ In summary, we already have the information we need to fully automate the creati
 and this is something we will be focussing on during 2020.
 
 ### 9.2 Jira & ServiceNow RPA Libraries
-[Jira](https://www.atlassian.com/software/jira) & [ServiceNow](https://www.servicenow.com/) are popular platforms for implementing digital workflows across the enterprise.  Both services offer RESTful JSON APIs as a way of automating ticketing  workflows, especially creating and updating issues in response to events that occur in the continuous delivery pipeline, for example.
+[Jira](https://www.atlassian.com/software/jira) & [ServiceNow](https://www.servicenow.com/) are popular platforms for
+implementing digital workflows across the enterprise.  Both services offer RESTful JSON APIs as a way of automating
+ticketing  workflows, especially creating and updating issues in response to events that occur in the
+continuous delivery pipeline, for example.
 
-Robot Framework already offers the [RESTinstance Library](https://github.com/asyrjasalo/RESTinstance) which could be used as a base for higher level user keywords.
+Robot Framework already offers the [RESTinstance Library](https://github.com/asyrjasalo/RESTinstance) which could be
+used as a base for higher level user keywords.
 
 > RESTinstance relies on Robot Framework's language-agnostic, clean and minimal syntax, for API tests. It is neither tied to
 > any particular programming language nor development framework. Using RESTinstance requires little, if any, programming
 > knowledge. It builts on long-term technologies with well established communities, such as HTTP, JSON (Schema),
 > Swagger/OpenAPI and Robot Framework.
 
-Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.  We already have base Python classes that have implemented some of the standard workflows so it would be simple to port these across to new Robot Framework libraries that could be used by a wider audience.
+Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.
+We already have base Python classes that have implemented some of the standard workflows so it would be simple to port
+these across to new Robot Framework libraries that could be used by a wider audience.
 ### 9.3 AWS Cloud Workflow
 Blah
 ### 9.4 Control-M Workload Automation
-[Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by larger companies to manage enterprise-wide workflows across all platforms, including Windows, Unix and mainframes.
+[Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by major companies to manage enterprise-wide
+workflows across all platforms, including Windows, Unix/Linux and mainframe.
 
-> Control-M simplifies application workflow orchestration. It makes it easy to define, schedule, manage and monitor workflows,
-> ensuring visibility and reliability, and improving SLAs.
+>Control-M simplifies application workflow orchestration. It makes it easy to define, schedule, manage and monitor
+>workflows, ensuring visibility and reliability, and improving SLAs.
 
-In recent years, Control-M has undergone a major revamp. BMC have rebuit the service from the ground up and now offer what they call [Jobs-as-Code](http://jobsascode.io/).  Cross-platform, workflow jobs are defined using JSON and the service can be driven via RPA using the REST API interface offered as standard.
+In recent years, Control-M has undergone a major revamp. BMC have rebuit the service from the ground up and now offer
+what they call [Jobs-as-Code](http://jobsascode.io/).  Cross-platform, workflow jobs are defined using developer-friendly
+JSON and the service can be driven via RPA using the REST API interface which is offered as standard.
 
-It is also possible to trigger build and deploy type processes via the REST API interface which allows Control-M configurations to be defined, built, tested and deployed using contemporary CI/CD pipelines.
+It is also possible to trigger build and deploy processes via the REST API interface which allows Control-M
+configurations to be defined, built, tested and deployed using contemporary DevOps CI/CD pipelines.
 ### 9.5 Kibana Dashboard Integration
 Here's the introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
 
