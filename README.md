@@ -104,7 +104,7 @@ There are two main methods: using pip or installing the latest version from sour
 #### Install using pip:
 > `$ pip3 install robotframework`\
 > `$ python3 -m robot --version`
-#### For the latest development branch, install by git cloning the repository from GitHub and run setup.py:
+#### For the latest development branch, install by cloning the repository from GitHub and run setup.py:
 > `$ git clone https://github.com/robotframework/robotframework.git`\
 > `$ cd robotframework`\
 > `$ python3 setup.py install`
@@ -137,7 +137,7 @@ and is currently maintained by [Jerry Schneider](https://github.com/jerry57).
 The [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library) GitHub repository
 contains code and sample test scripts.
 
-In order to run the Database Library test suites locally it is necessary to `git clone` the repository from GitHub:
+In order to run the Database Library test suites locally it is necessary to clone the repository from GitHub:
 > `$ git clone https://github.com/franz-see/Robotframework-Database-Library.git`
 
 ### 4.2 API Documentation
