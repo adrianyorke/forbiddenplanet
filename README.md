@@ -257,7 +257,7 @@ Robot Framework already offers the [RESTinstance Library](https://github.com/asy
 > knowledge. It builts on long-term technologies with well established communities, such as HTTP, JSON (Schema),
 > Swagger/OpenAPI and Robot Framework.
 
-Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.  We already have base Python classes that have implemented some of the standard workflows so it would be relatively straightforward to port these across to new Robot Framework libraries that could be used by a wider audience.
+Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.  We already have base Python classes that have implemented some of the standard workflows so it would be simple to port these across to new Robot Framework libraries that could be used by a wider audience.
 ### 9.3 AWS Cloud Workflow
 Blah
 ### 9.4 Control-M Workload Automation
