@@ -203,10 +203,13 @@ in the order that they are used:
 
 
 ## 5. Robot Framework Testing with PostgreSQL
-![PostgreSQL](src/images/postgresql.jpg)
-[PostgreSQL](https://www.postgresql.org/) is a powerful, open source object-relational database system
-with over 30 years of active development that has earned it a strong reputation for reliability,
-feature robustness, and performance.  PostgreSQL describes itself as "The World's Most Advanced Open Source Relational Database".
+![PostgreSQL](src/images/postgresql.jpg)\
+Here is the introductory paragraph from [PostgreSQL.org](https://www.postgresql.org/):
+
+> PostgreSQL is a powerful, open source object-relational database system
+> with over 30 years of active development that has earned it a strong reputation for reliability,
+> feature robustness, and performance. The World's Most Advanced Open Source Relational Database.
+
 ### 5.1 Preparation for PostgreSQL
 * For PostgreSQL testing, we will use a PostgreSQL instance installed on Windows Subsystem for Linux (WSL).
 You can use this [simple guide](https://medium.com/@harshityadav95/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
@@ -222,7 +225,7 @@ I recommend the Open Source tool [pgAdmin](https://www.pgadmin.org/download/).
 Work through [PostgreSQL test suite](test/PostgreSQL_DB_Tests.robot)
 and check our installation is working.
 
-> Note: I made a slight modification to the default test suite.  I moved `Drop person and foobar tables` test case
+> Note: there is a slight modification to the default test suite.  I moved `Drop person and foobar tables` test case
 > to the beginning of the test suite so the data and tables persist between tests.
 
 Here is a summary of database library keywords which we will be covering in the
@@ -348,8 +351,7 @@ JSON and the service can be orchestrated via RPA using the REST API interface wh
 It is also possible to trigger build and deploy processes via the REST API interface which allows Control-M
 configurations to be defined, built, tested and deployed using contemporary DevOps CI/CD pipelines.
 ### 9.5 Kibana Dashboard Integration
-![Kibana](src/images/kibana.jpg)
-
+![Kibana](src/images/kibana.jpg)\
 Here's the introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
 
 > “Kibana is an open source data visualization dashboard for Elasticsearch. It provides visualization capabilities on top
