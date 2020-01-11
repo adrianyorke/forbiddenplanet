@@ -249,7 +249,12 @@ and this is something we will be focussing on during 2020.
 
 ### 9.2 Jira & ServiceNow RPA Libraries
 [Jira](https://www.atlassian.com/software/jira) & [ServiceNow](https://www.servicenow.com/) are popular platforms for
-implementing digital workflows across the enterprise.  Both services offer RESTful JSON APIs as a way of automating
+implementing digital workflows across the enterprise.
+
+![Jira](src/images/jira.jpg)
+![ServiceNow](src/images/service_now.jpg)
+
+Both services offer RESTful JSON APIs as a way of automating
 ticketing  workflows, especially creating and updating issues in response to events that occur in the
 continuous delivery pipeline, for example.
 
@@ -264,18 +269,44 @@ used as a base for higher level user keywords.
 Alternatively, it would be relatively straightforward to implement Jira and ServiceNow specific Robot Framework libraries.
 We already have base Python classes that have implemented some of the standard workflows so it would be simple to port
 these across to new Robot Framework libraries that could be used by a wider audience.
-### 9.3 AWS Cloud Workflow
-Blah
+### 9.3 Cloud Computing Workflow
+OP uses [Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) as our Cloud Computing platform.  
+
+![AWS](src/images/aws.jpg)
+
+> Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 175
+> fully featured services from data centers globally.
+
+In this section we focus on AWS although the same Robot Framework integrations, workflows and techniques decribed here
+could be implemented with all major cloud vendors.
+
+During 2019 it became apparent that we were lacking a common Test Automation solution for our cloud-hosted data solutions.
+The on-premise data warehouses were actively using Robot Framework to test data files and databases so we started
+to explore options using Robot Framework and [Robot Framework AWS Library](https://github.com/teaglebuilt/robotframework-aws)
+
+Unfortunately, there were a number of issues with Robot Framework AWS Library, not least that the licencing model was
+quite restrictive for company use so we were unable to immediately import the library.  Once we made contact with the
+author, it was clear that there had been a mistake.  This also explained the limited/slow uptake of the AWS library.
+The author change the license from `GNU Affero General Public License v3.0` to the more liberal and commonly used
+`MIT License (MIT)`
+
+We have helped the author by logging issues, creating pull requests and generally helping develop the library and recently
+we were able to implement a Robot Framework solution that interacts with Amazon S3, checking file format and contents.
+
+
+
 ### 9.4 Control-M Workload Automation
 [Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by major companies to manage enterprise-wide
-workflows across all platforms, including Windows, Unix/Linux and mainframe.
+workloads and workflow orchestration across all major platforms, including Unix/Linux, Windows and mainframe.
 
->Control-M simplifies application workflow orchestration. It makes it easy to define, schedule, manage and monitor
->workflows, ensuring visibility and reliability, and improving SLAs.
+![Control-M](src/images/control-m.JPG)
+
+> Control-M simplifies application workflow orchestration. It makes it easy to define, schedule, manage and monitor
+> workflows, ensuring visibility and reliability, and improving SLAs.
 
 In recent years, Control-M has undergone a major revamp. BMC have rebuit the service from the ground up and now offer
 what they call [Jobs-as-Code](http://jobsascode.io/).  Cross-platform, workflow jobs are defined using developer-friendly
-JSON and the service can be driven via RPA using the REST API interface which is offered as standard.
+JSON and the service can be orchestrated via RPA using the REST API interface which is offered as standard.
 
 It is also possible to trigger build and deploy processes via the REST API interface which allows Control-M
 configurations to be defined, built, tested and deployed using contemporary DevOps CI/CD pipelines.
