@@ -270,9 +270,9 @@ Alternatively, it would be relatively straightforward to implement Jira and Serv
 We already have base Python classes that have implemented some of the standard workflows so it would be simple to port
 these across to new Robot Framework libraries that could be used by a wider audience.
 ### 9.3 Cloud Computing Workflow
-OP uses [Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) as our Cloud Computing platform.  
-
 ![AWS](src/images/aws.jpg)
+
+OP uses [Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) as our Cloud Computing platform.  
 
 > Amazon Web Services (AWS) is the world’s most comprehensive and broadly adopted cloud platform, offering over 175
 > fully featured services from data centers globally.
@@ -280,7 +280,7 @@ OP uses [Amazon Web Services (AWS)](https://aws.amazon.com/what-is-aws/) as our 
 In this section we focus on AWS although the same Robot Framework integrations, workflows and techniques decribed here
 could be implemented with all major cloud vendors.
 
-During 2019 it became apparent that we were lacking a common Test Automation solution for our cloud-hosted data solutions.
+During 2019 it became apparent that we were lacking a common Test Automation framework for our cloud-hosted data solutions.
 The on-premise data warehouses were actively using Robot Framework to test data files and databases so we started
 to explore options using Robot Framework and [Robot Framework AWS Library](https://github.com/teaglebuilt/robotframework-aws)
 
@@ -290,16 +290,18 @@ author, it was clear that there had been a mistake.  This also explained the lim
 The author change the license from `GNU Affero General Public License v3.0` to the more liberal and commonly used
 `MIT License (MIT)`
 
-We have helped the author by logging issues, creating pull requests and generally helping develop the library and recently
-we were able to implement a Robot Framework solution that interacts with Amazon S3, checking file format and contents.
+We have helped the author by logging issues, creating pull requests and generally helping develop the library further.
+Recently, we were able to implement a Robot Framework solution that interacts with Amazon S3, checking file format
+and contents and comparing with the control file.
+
 
 
 
 ### 9.4 Control-M Workload Automation
+![Control-M](src/images/control-m.jpg)
+
 [Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by major companies to manage enterprise-wide
 workloads and workflow orchestration across all major platforms, including Unix/Linux, Windows and mainframe.
-
-![Control-M](src/images/control-m.JPG)
 
 > Control-M simplifies application workflow orchestration. It makes it easy to define, schedule, manage and monitor
 > workflows, ensuring visibility and reliability, and improving SLAs.
@@ -311,6 +313,8 @@ JSON and the service can be orchestrated via RPA using the REST API interface wh
 It is also possible to trigger build and deploy processes via the REST API interface which allows Control-M
 configurations to be defined, built, tested and deployed using contemporary DevOps CI/CD pipelines.
 ### 9.5 Kibana Dashboard Integration
+![Kibana](src/images/kibana.jpg)
+
 Here's the introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
 
 > “Kibana is an open source data visualization dashboard for Elasticsearch. It provides visualization capabilities on top
