@@ -158,6 +158,7 @@ sharing with the open source community by submitting a pull request.
 Let's have a look at the [test](https://github.com/franz-see/Robotframework-Database-Library/tree/master/test) folder and
 explore some of the test suites available. 
 ### 4.5 Why SQLite?
+![SQLite](src/images/sqlite.jpg)\
 SQLite is a fully featured database that ships by default with the Python Standard Library and is implemented using C.
 There is no server installation or configuration and the whole relational database is implemented using only a single file.
 Despite this simplicity of design, SQLite is surprising feature rich and provides an excellent way of learning about
