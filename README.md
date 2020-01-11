@@ -179,11 +179,11 @@ SQLite is available on all Python installations and one of the appropriate uses 
 ### 4.6 DB-API 2.0 for SQLite
 [DB-API 2.0 interface for SQLite databases](https://docs.python.org/2/library/sqlite3.html)
 ### 4.7 Work through our first robot test suite
-Work through [SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
+Work through [SQLite test suite](test/SQLite3_DB_Tests.robot)
 and check our installation is working.
 
 Here is a summary of database library keywords which we will be covering in the
-[SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
+[SQLite test suite](test/SQLite3_DB_Tests.robot)
 in the order that they are used:
 * `Connect To Database Using Custom Params`
 * `Execute SQL String`
@@ -201,16 +201,42 @@ in the order that they are used:
 
 
 ## 5. Robot Framework Testing with PostgreSQL
-[SQLite test suite](https://github.com/franz-see/Robotframework-Database-Library/blob/master/test/SQLite3_DB_Tests.robot)
+![PostgreSQL](src/images/postgresql.jpg)
+### 5.1 Preparation for PostgreSQL
+* For PostgreSQL testing, we will use a PostgreSQL instance installed on Windows Subsystem for Linux (WSL).
+You can use this [simple guide](https://medium.com/@harshityadav95/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
+to install and configure PostgreSQL on Windows Subsystem for Linux (WSL).
+* Next you will need to install a database adapter to access PostgreSQL using Python and Robot Framework.
+[Psycopg](https://pypi.org/project/psycopg2/) is the most popular
+PostgreSQL database adapter for the Python programming language:
+> `$ pip3 install psycopg2`
+* Although not essential, it is also recommended that you install an administration tool if you plan to
+do any serious development work with PostgreSQL.
+I recommend the Open Source tool [pgAdmin](https://www.pgadmin.org/download/).
+### 5.2 Work through our PostgreSQL robot test suite
+Work through [PostgreSQL test suite](test/PostgreSQL_DB_Tests.robot)
+and check our installation is working.
 
+> Note: I made a slight modification to the default test suite.  I moved `Drop person and foobar tables` test case
+> to the beginning of the test suite so the data and tables persist between tests.
 
-Testing with Teradata
-2
-3
-4
-5
-6
-Good things are going here.
+Here is a summary of database library keywords which we will be covering in the
+[PostgreSQL test suite](test/PostgreSQL_DB_Tests.robot)
+in the order that they are used:
+* `Connect To Database` (called by `Suite Setup` in `*** Settings ***`)
+* `Execute SQL String`
+* `Execute SQL Script`
+* `Check If Exists In Database`
+* `Check If Not Exists In Database`
+* `Table Must Exist`
+* `Row Count Is 0`
+* `Row Count Is Equal To X`
+* `Row Count Is Less Than X`
+* `Row Count Is Greater Than X`
+* `Row Count`
+* `Description`
+* `Query`
+* `Delete All Rows From Table` (commented out using `*** Comments ***`)
 
 ## 6. Teradata Database Library (in-house development @ OP)
 Teradata Database Library
@@ -301,10 +327,6 @@ The author change the license from `GNU Affero General Public License v3.0` to t
 We have helped the author by logging issues, creating pull requests and generally helping develop the library further.
 Recently, we were able to implement a Robot Framework solution that interacts with Amazon S3, checking file format
 and contents and comparing with the control file.
-
-
-
-
 ### 9.4 Control-M Workload Automation
 ![Control-M](src/images/control-m.jpg)
 

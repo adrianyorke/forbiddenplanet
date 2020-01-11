@@ -14,6 +14,11 @@ ${DBPort}         5432
 ${DBUser}         adrian
 
 *** Test Cases ***
+Drop person and foobar tables
+    ${output} =    Execute SQL String    DROP TABLE IF EXISTS person,foobar;
+    Log    ${output}
+    Should Be Equal As Strings    ${output}    None
+
 Create person table
     ${output} =    Execute SQL String    CREATE TABLE person (id integer unique,first_name varchar,last_name varchar);
     Log    ${output}
@@ -133,6 +138,7 @@ Verify Query - Row Count foobar table 1 row
     ${val}=    Get from list    ${val}    0
     Should be equal as Integers    ${val}    1
 
+*** Comments ***
 Verify Delete All Rows From Table - foobar
     Delete All Rows From Table    foobar
     Comment    Sleep    2s
@@ -142,9 +148,3 @@ Verify Query - Row Count foobar table 0 row
     Comment    ${output} =    Query    SELECT COUNT(*) FROM foobar;
     Comment    Log    ${output}
     Comment    Should Be Equal As Strings    ${output}    [(0,)]
-
-*** Comments ***
-Drop person and foobar tables
-    ${output} =    Execute SQL String    DROP TABLE IF EXISTS person,foobar;
-    Log    ${output}
-    Should Be Equal As Strings    ${output}    None
