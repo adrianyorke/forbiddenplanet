@@ -69,9 +69,11 @@ database after an action has been made to verify the results.
 
 ## 2. Preparation
 ### 2.1 Clone GitHub repository for this workshop
+![GitHub](src/images/github.jpg)
 #### For those that wish to follow along, clone the GitHub repository which contains workshop documentation and examples:
 > `$ git clone https://github.com/adrianyorke/forbiddenplanet`
 ### 2.2 Installation of Python and pip
+![Python](src/images/python.jpg)
 #### Python 2 vs Python 3
 Which version of Python should I use?  Check the [wiki](https://wiki.python.org/moin/Python2orPython3) from python.org.
 Quite simply, you should be using Python 3 going forward.  Any existing Python 2 code should be converted to Python 3 as
@@ -99,6 +101,7 @@ recommended for any non-trivial development.  More information can be found in
 > `$ sudo apt update`\
 > `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
+![Robot Framework](src/images/rf.jpg)
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
@@ -298,7 +301,7 @@ and contents and comparing with the control file.
 
 
 ### 9.4 Control-M Workload Automation
-![Control-M](src/images/control-m-2.jpg)
+![Control-M](src/images/control-m.jpg)
 
 [Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by major companies to manage enterprise-wide
 workloads and workflow orchestration across all major platforms, including Unix/Linux, Windows and mainframe.
