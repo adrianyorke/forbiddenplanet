@@ -26,6 +26,8 @@
    4.6 [DB-API 2.0 for SQLite](#46-db-api-20-for-sqlite)\
    4.7 [Work through our first robot test suite](#47-work-through-our-first-robot-test-suite)
 5. [Robot Framework Testing with PostgreSQL](#5-robot-framework-testing-with-postgresql)\
+   5.1 [Preparation for PostgreSQL](#51-preparation-for-postgresql)\
+   5.2 [Work through PostgreSQL robot test suite](#52-work-through-postgresql-robot-test-suite)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
 8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
@@ -202,6 +204,9 @@ in the order that they are used:
 
 ## 5. Robot Framework Testing with PostgreSQL
 ![PostgreSQL](src/images/postgresql.jpg)
+[PostgreSQL](https://www.postgresql.org/) is a powerful, open source object-relational database system
+with over 30 years of active development that has earned it a strong reputation for reliability,
+feature robustness, and performance.  PostgreSQL describes itself as "The World's Most Advanced Open Source Relational Database".
 ### 5.1 Preparation for PostgreSQL
 * For PostgreSQL testing, we will use a PostgreSQL instance installed on Windows Subsystem for Linux (WSL).
 You can use this [simple guide](https://medium.com/@harshityadav95/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
@@ -213,7 +218,7 @@ PostgreSQL database adapter for the Python programming language:
 * Although not essential, it is also recommended that you install an administration tool if you plan to
 do any serious development work with PostgreSQL.
 I recommend the Open Source tool [pgAdmin](https://www.pgadmin.org/download/).
-### 5.2 Work through our PostgreSQL robot test suite
+### 5.2 Work through PostgreSQL robot test suite
 Work through [PostgreSQL test suite](test/PostgreSQL_DB_Tests.robot)
 and check our installation is working.
 
