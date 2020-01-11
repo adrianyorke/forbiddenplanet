@@ -50,6 +50,7 @@ You really can teach an old dog new tricks!
 * When I'm not being a geek: swimming (former British national championship swimmer), long distance running (I actually completed
 the London marathon!), carpentry & just being there for my daughter and helping her grow.
 ### 1.3 Robot Framework
+![Robot Framework](src/images/rf.jpg)\
 Here's the introductory paragraph from robotframework.org:
 
 > “[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
@@ -101,7 +102,7 @@ recommended for any non-trivial development.  More information can be found in
 > `$ sudo apt update`\
 > `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
-![Robot Framework](src/images/rf2.jpg)\
+![Robot Framework](src/images/rf.jpg)\
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods of installation: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
