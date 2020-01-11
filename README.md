@@ -207,6 +207,7 @@ Testing with Teradata
 4
 5
 6
+Good things are going here.
 
 ## 6. Teradata Database Library (in-house development @ OP)
 Teradata Database Library
