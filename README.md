@@ -298,7 +298,7 @@ and contents and comparing with the control file.
 
 
 ### 9.4 Control-M Workload Automation
-![Control-M](src/images/control-m.jpg)
+![Control-M](src/images/control-m-2.jpg)
 
 [Control-M](https://www.bmc.com/it-solutions/control-m.html) is used by major companies to manage enterprise-wide
 workloads and workflow orchestration across all major platforms, including Unix/Linux, Windows and mainframe.
