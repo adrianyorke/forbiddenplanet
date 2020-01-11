@@ -101,7 +101,7 @@ recommended for any non-trivial development.  More information can be found in
 > `$ sudo apt update`\
 > `$ sudo apt install python3-pip`
 ### 2.3 Installation of Robot Framework
-![Robot Framework](src/images/rf.jpg)\
+![Robot Framework](src/images/rf2.jpg)\
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
 There are two main methods of installation: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
