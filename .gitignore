@@ -5,5 +5,5 @@
 .idea/
 
 # test
-test/
-
+test/*.html
+test/*.xml
