@@ -30,9 +30,9 @@
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
 8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)\
-   9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitsmoke-testing)\
+   9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitfunctional-testing)\
    9.2 [Jira & ServiceNow RPA Libraries](#92-jira--servicenow-rpa-libraries)\
-   9.3 [AWS Cloud Workflow](#93-aws-cloud-workflow)\
+   9.3 [Cloud Computing Workflow](#93-cloud-computing-workflow)\
    9.4 [Control-M Workload Automation](#94-control-m-workload-automation)\
    9.5 [Kibana Dashboard Integration](#95-kibana-dashboard-integration)\
    9.6 [Integrating Machine Learning and Data Science](#96-integrating-machine-learning-and-data-science)
