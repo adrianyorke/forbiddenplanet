@@ -103,7 +103,7 @@ recommended for any non-trivial development.  More information can be found in
 ### 2.3 Installation of Robot Framework
 ![Robot Framework](src/images/rf.jpg)\
 Installation of Robot Framework is documented [here](https://github.com/robotframework/robotframework#installation).
-There are two main methods: using pip or installing the latest version from source code from PyPi or GitHub.
+There are two main methods of installation: using pip or installing the latest version from source code from PyPi or GitHub.
 #### Install using pip:
 > `$ pip3 install robotframework`\
 > `$ python3 -m robot --version`
