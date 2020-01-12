@@ -30,9 +30,9 @@
    5.2 [Work through PostgreSQL robot test suite](#52-work-through-postgresql-robot-test-suite)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
-   7.1 [Continuous Integration 101](#7-test-automation-with-jenkins-ci)\
-   7.2 [Jenkins CI](#7-test-automation-with-jenkins-ci)\
-   7.3 [Introducing EDW Test Runner](#7-test-automation-with-jenkins-ci)
+   7.1 [Continuous Integration 101](#71-continuous-integration-101)\
+   7.2 [Jenkins CI](#72-jenkins-ci)\
+   7.3 [Introducing EDW Test Runner](#73-introducing-edw-test-runner)
 8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)\
    9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitfunctional-testing)\
@@ -274,10 +274,10 @@ In the database domain, functional testing will normally require a separate data
 Here's a simple defintion from [ThoughtWorks](https://www.thoughtworks.com/continuous-integration):
 
 > Continuous Integration (CI) is a development practice that requires developers to integrate code
-> into a shared repository several times a day. Each check-in is then verified by an automated build,
-> allowing teams to detect problems early.
+> into a shared repository several times a day. Each check-in is then verified by an automated build
+> [and automated tests], allowing teams to detect problems early.
 
-Here's what [Atlassian](https://www.atlassian.com/continuous-delivery/continuous-integration)
+Here is what [Atlassian](https://www.atlassian.com/continuous-delivery/continuous-integration)
 has to say about Continuous Integration:
 
 > Continuous integration (CI) is the practice of automating the integration of code changes from multiple
@@ -286,11 +286,12 @@ has to say about Continuous Integration:
 > The version control system is also supplemented with other checks like automated code quality tests,
 > syntax style review tools, and more. 
 
-In the database domain regular integrations are critical.  The code is most likely to be scripts, database configuration,
-metadata and ETL process defintions.  In the past database code was integrated too late, usually when the solution
-moved up to the next environment.  This can be many days or weeks after the developer committed the code/scripts.
+In the database domain regular integrations are critical.  The code is most likely to consist of scripts, database
+configuration, metadata and ETL process defintions.  In the past database code was integrated too late, usually when
+the solution moved up to the next environment.  This can be many days or weeks after the developer committed
+the code/scripts.
 
-It is vital that developer updates to the version control system are built and tested as soon as possible
+It is vital that developer pushes to the version control system are built and tested as soon as possible
 and this is exactly the problem that Continuous Integration and Test Automation solves.
 
 
