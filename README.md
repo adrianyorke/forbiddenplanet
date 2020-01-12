@@ -30,6 +30,9 @@
    5.2 [Work through PostgreSQL robot test suite](#52-work-through-postgresql-robot-test-suite)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
+   7.1 [Continuous Integration 101](#7-test-automation-with-jenkins-ci)\
+   7.2 [Jenkins CI](#7-test-automation-with-jenkins-ci)\
+   7.3 [Introducing EDW Test Runner](#7-test-automation-with-jenkins-ci)
 8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)\
    9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitfunctional-testing)\
@@ -215,6 +218,8 @@ Here is the introductory paragraph from [PostgreSQL.org](https://www.postgresql.
 * For PostgreSQL testing, we will use a PostgreSQL instance installed on Windows Subsystem for Linux (WSL).
 You can use this [simple guide](https://medium.com/@harshityadav95/postgresql-in-windows-subsystem-for-linux-wsl-6dc751ac1ff3)
 to install and configure PostgreSQL on Windows Subsystem for Linux (WSL).
+Once the database is installed (and each time your restart the host) you will need start up the service in WSL:
+> `$ sudo service postgresql start`
 * Next you will need to install a database adapter to access PostgreSQL using Python and Robot Framework.
 [Psycopg](https://pypi.org/project/psycopg2/) is the most popular
 PostgreSQL database adapter for the Python programming language:
@@ -248,28 +253,65 @@ in the order that they are used:
 * `Delete All Rows From Table` (commented out using `*** Comments ***`)
 
 ## 6. Teradata Database Library (in-house development @ OP)
-Teradata Database Library
-2
-3
-4
-5
-6
+### 6.1 Review Teradata Support added to Database Library
+X
+### 6.2 additional keywords we have added at OP
+X
+### 6.3 Discuss the different methods of extending keywords
+X
+### 6.4 Different types of testing
+* Smoke Testing
+Unit testing or smoke testing is the most basic form of testing.
+* Functional Testing
+Functional testing is used to 
+* Regression Testing
+It's important to check that each release does not break any existing features.
+In the database domain, functional testing will normally require a separate database environment.
+
 
 ## 7. Test Automation with Jenkins CI
-CI
-2
-3
-4
-5
-6
+### 7.1 Continuous Integration 101
+Here's a simple defintion from [ThoughtWorks](https://www.thoughtworks.com/continuous-integration):
+
+> Continuous Integration (CI) is a development practice that requires developers to integrate code
+> into a shared repository several times a day. Each check-in is then verified by an automated build,
+> allowing teams to detect problems early.
+
+Here's what [Atlassian](https://www.atlassian.com/continuous-delivery/continuous-integration)
+has to say about Continuous Integration:
+
+> Continuous integration (CI) is the practice of automating the integration of code changes from multiple
+> contributors into a single software project. The CI process is comprised of automatic tools that assert
+> the new code’s correctness before integration. A source code version control system is the crux of the CI process.
+> The version control system is also supplemented with other checks like automated code quality tests,
+> syntax style review tools, and more. 
+
+In the database domain regular integrations are critical.  The code is most likely to be scripts, database configuration,
+metadata and ETL process defintions.  In the past database code was integrated too late, usually when the solution
+moved up to the next environment.  This can be many days or weeks after the developer committed the code/scripts.
+
+It is vital that developer updates to the version control system are built and tested as soon as possible
+and this is exactly the problem that Continuous Integration and Test Automation solves.
+
+
+### 7.2 Jenkins CI
+![Jenkins](src/images/jenkins.jpg)\
+Here is the opening statement from the [wiki](https://en.wikipedia.org/wiki/Jenkins_(software)):
+> Jenkins is a free and open source automation server. Jenkins helps to automate the non-human
+> part of the software development process, with continuous integration and facilitating technical aspects
+> of continuous delivery.
+### 7.3 Introducing EDW Test Runner
+X
+
 
 ## 8. IBM InfoSphere DataStage Library (in-house development @ OP)
-DataStage
-2
-3
-4
-5
-6
+### 8.1 IBM InfoSphere DataStage
+![IBM InfoSphere DataStage](src/images/datastage.jpg)\
+Here is a brief description of [IBM InfoSphere DataStage](https://www.ibm.com/products/infosphere-datastage):
+
+> Extract, transfer and load (ETL) data for enterprise applications in multicloud or hybrid environments,
+> supporting extended metadata management and big-data connectivity
+
 
 ## 9. The future - what are we working on next @ OP?
 ### 9.1 Fully Automated Unit/Functional Testing
