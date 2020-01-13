@@ -37,7 +37,10 @@
    7.1 [Continuous Integration 101](#71-continuous-integration-101)\
    7.2 [Jenkins CI](#72-jenkins-ci)\
    7.3 [Introducing EDW Test Runner](#73-introducing-edw-test-runner)
-8. [IBM InfoSphere DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
+8. [IBM InfoSphere® DataStage Library (in-house development @ OP)](#8-ibm-infosphere-datastage-library-in-house-development--op)\
+   8.1 [IBM InfoSphere® DataStage](#81-ibm-infosphere-datastage)\
+   8.2 [Robotic Process Automation (RPA)](#82-robotic-process-automation-rpa)\
+   8.3 [Smart Data Loader](#83-smart-data-loader)
 9. [The future - what are we working on next @ OP?](#9-the-future---what-are-we-working-on-next--op)\
    9.1 [Fully Automated Unit/Smoke Testing](#91-fully-automated-unitfunctional-testing)\
    9.2 [Jira & ServiceNow RPA Libraries](#92-jira--servicenow-rpa-libraries)\
@@ -390,18 +393,62 @@ Here's a list of the main command line arguments to give you some idea of the fu
 * `--environment` (Dev, Integration, Test, PreProd, Prod, etc.)
 
 
-## 8. IBM InfoSphere DataStage Library (in-house development @ OP)
-### 8.1 IBM InfoSphere DataStage
-![IBM InfoSphere DataStage](src/images/datastage.jpg)\
-Here is a brief description of [IBM InfoSphere DataStage](https://www.ibm.com/products/infosphere-datastage):
+## 8. IBM InfoSphere® DataStage Library (in-house development @ OP)
+### 8.1 IBM InfoSphere® DataStage
+![IBM InfoSphere® DataStage](src/images/datastage.jpg)\
+Here is a brief description of [IBM InfoSphere® DataStage](https://www.ibm.com/products/infosphere-datastage):
 
 > Extract, transfer and load (ETL) data for enterprise applications in multicloud or hybrid environments,
 > supporting extended metadata management and big-data connectivity
+### 8.2 Robotic Process Automation (RPA)
+Here's how robotframework.org introduces [RPA](https://robotframework.org/rpa/):
 
-### 8.2 Robotic Process Automation
+> Robot Framework is an open source robotic process automation (RPA) solution that is used
+> to automate business processes. It is open and extensible which means that it can be integrated with
+> virtually any other tool to create powerful and flexible RPA solutions.
 
-
+In its simplest form, you can consider RPA as being similar to batch scripting.  However, using Robot Framework
+it is possible to implement more complex end-to-end testing across multiple Systems Under Test (SUTs),
+multiple technology stacks and architectures.  In the Smart Data Loader example next you will see how we use RPA to make
+intelligent processing decisions based on Teradata Database state, DataStage state and File System state.
 ### 8.3 Smart Data Loader
+We needed a utility that could be used to load data more intelligently than simply running dumb shell scripts.  Shell scripts
+are fine for simple cases, where everything is perfect but this is rare.  If we are loading 1000 files at the 
+weekend or overnight when no human is monitoring, we did not want the data loading process to fail if the network
+was briefly unavailable.  The basic building blocks for Smart Data Loader include:
+* Teradata Database (Robot Framework library already developed internally)
+* DataStage (new Robot Framework library)
+* File System (basic keywords already available via [OperatingSystem](http://robotframework.org/robotframework/latest/libraries/OperatingSystem.html) Standard library)
+
+In order to load data automatically and smartly into the data warehouse we required a number of additional
+keywords to automate state checks and state transitions in the database as the load process progresses.  These
+higher-level keywords were implemented using a resource file built on top of Teradata Database Library:
+* `Reset Business Date`
+* `Reset Stream`
+* `Reset Process State`
+* `Set Stream State`
+* `Set Business Date State`
+* `Validate BusinessDate State`
+* `Validate Stream State`
+* `No Open Processes For Stream`
+* `Stream Is Closed`
+* `Business Date Is Closed`
+* `Verify Process Has Run`
+* `Verify Process State`
+
+As well as Teradata database RPA, it is of course necessary to drive the actual ETL (Extract Transform Load) process jobs
+using DataStage.  The following additional higher-level keywords were implemented using DataStage Library:
+* `Reset And Run Job`
+* `Reset And Run Job With Parameters`
+    
+The underlying DataStage Library is a simple class library using the `subprocess` Python library to interact with the
+operating system.  IBM provides a number of command line utilities that we can use to implement a Robot Framework
+library:
+* [dsadmin](https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_9.1.0/com.ibm.swg.im.iis.ds.cliapi.ref.doc/topics/r_dsvjbref_Commands_for_Administering_WebSphere_DataStage.html)\
+There is a single command for administering projects, dsadmin. The command has a large range of options.
+* dsjob
+* [istool](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.iisinfsv.assetint.doc/topics/commandset.html)\
+You can use the istool commands to manage assets that are stored in the metadata repository of InfoSphere® Information Server.
 
 
 ## 9. The future - what are we working on next @ OP?
