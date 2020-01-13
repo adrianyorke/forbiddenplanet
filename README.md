@@ -342,23 +342,52 @@ has to say about Continuous Integration:
 > The version control system is also supplemented with other checks like automated code quality tests,
 > syntax style review tools, and more. 
 
-In the database domain regular integrations are critical.  The code is most likely to consist of scripts, database
-configuration, metadata and ETL process defintions.  In the past database code was integrated too late, usually when
-the solution moved up to the next environment.  This can be many days or weeks after the developer committed
-the code/scripts.
+In the database domain, like many other domains, regular integrations of code is critical.
+The code is most likely to consist of scripts, database configuration, metadata, mappings & transformations,
+ETL process defintions and scripts for scheduling.  In the past database code was
+integrated too late, usually when the solution moved up to the next environment.  This can be many days
+or weeks after the developer committed the code/scripts.
 
 It is vital that developer pushes to the version control system are built and tested as soon as possible
 and this is exactly the problem that Continuous Integration and Test Automation solves.
 
-
+We run tests using Robot Framework which checks, for example, that internal standards have been followed in the code.
+In the event of an error the information is fed back via email and MS Teams.
 ### 7.2 Jenkins CI
 ![Jenkins](src/images/jenkins.jpg)\
 Here is the opening statement from the [wiki](https://en.wikipedia.org/wiki/Jenkins_(software)):
+
 > Jenkins is a free and open source automation server. Jenkins helps to automate the non-human
 > part of the software development process, with continuous integration and facilitating technical aspects
 > of continuous delivery.
+
+To get started with Jenkins you need to download the software from the [download site](https://jenkins.io/download/)
+for your OS. You can also use a pre-configured virtual machine, Docker container or a cheap, single board computer
+like a [Raspberry Pi](https://raspberrytips.com/install-jenkins-raspberry-pi/) to run a local Jenkins
+instance.
+
+Detailed instructions for new installations of Jenkins on a single/local machine can be found in the [Jenkins
+User Documentation](https://jenkins.io/doc/book/installing/).
+
+You will need to use the [Jenkins Robot Framework Plugin](https://plugins.jenkins.io/robot)
 ### 7.3 Introducing EDW Test Runner
-X
+We needed a utility that would run Robot Framework test suites and Python xUnit test suites side-by-side.
+When we initially set up Test Automation, we were not aware of Robot Framework so we created test suites using Python
+code and the [unittest library](https://docs.python.org/3.8/library/unittest.html)
+
+EDW Test Runner was created to simplify the process of both local manual test execution and running tests automatically
+on the Continuous Integration server,  e.g. using Jenkins jobs.
+
+EDW Test Runner also handles authentication, environment switching, token replacement and log merging.
+
+Here's a list of the main command line arguments to give you some idea of the full functionality:
+* `--test_files` (test suite filter, e.g. "*.robot" or "*.py")
+* `--included_tags` (include specific tags, e.g. "smoke" to include smoke tests only)
+* `--excluded_tags` (exclude specific tags, e.g. "dataloaded" to exclude tests that require data to be loaded)
+* `--save_to_db` (save output to Teradata database)
+* `--verbose` (additional logging information)
+* `--timeout` (defaults to 600 seconds)
+* `--environment` (Dev, Integration, Test, PreProd, Prod, etc.)
 
 
 ## 8. IBM InfoSphere DataStage Library (in-house development @ OP)
