@@ -29,6 +29,10 @@
    5.1 [Preparation for PostgreSQL](#51-preparation-for-postgresql)\
    5.2 [Work through PostgreSQL robot test suite](#52-work-through-postgresql-robot-test-suite)
 6. [Teradata Database Library (in-house development @ OP)](#6-teradata-database-library-in-house-development--op)\
+   6.1 [Additional keywords we have added at OP](#61-additional-keywords-we-have-added-at-op)\
+   6.2 [Review Teradata Support added to Database Library](#62-review-teradata-support-added-to-database-library)\
+   6.3 [Discuss the different methods of extending keywords](#63-discuss-the-different-methods-of-extending-keywords)\
+   6.4 [Different types of testing](#64-different-types-of-testing)
 7. [Test Automation with Jenkins CI](#7-test-automation-with-jenkins-ci)\
    7.1 [Continuous Integration 101](#71-continuous-integration-101)\
    7.2 [Jenkins CI](#72-jenkins-ci)\
@@ -253,21 +257,73 @@ in the order that they are used:
 * `Delete All Rows From Table` (commented out using `*** Comments ***`)
 
 ## 6. Teradata Database Library (in-house development @ OP)
-### 6.1 Review Teradata Support added to Database Library
-X
-### 6.2 additional keywords we have added at OP
-X
-### 6.3 Discuss the different methods of extending keywords
-X
-### 6.4 Different types of testing
-* Smoke Testing
-Unit testing or smoke testing is the most basic form of testing.
-* Functional Testing
-Functional testing is used to 
-* Regression Testing
-It's important to check that each release does not break any existing features.
-In the database domain, functional testing will normally require a separate database environment.
+### 6.1 Additional keywords we have added at OP
+When we first discovered [Robotframework-Database-Library](https://github.com/franz-see/Robotframework-Database-Library)
+on GitHub there was no support for Teradata databases. We didn't have the skills to add Teradata support at the time so we created
+our own internal Teradata Database Library.
 
+Additional keywords were created to enhance the library for OP purposes:
+* `Execute SQL From File` (including token replacement code)
+* `Replace Table` (also drops stats and calls `Drop Table`)
+* `Drop Table` (also drops stats)
+* `Query Table` (simple SELECT * implementation - careful with large tables)
+* `Table Contains Data` (alias for row count != 0)
+* `Verify Column Count` (useful for checking versions)
+* `View Must Exist` (similar to `Table Must Exist` but for database views)
+* `Database Must Exist` (helps check deployment automation)
+* `gcfrRegistrationMustExist` (checks Global Control Framework metadata)
+### 6.2 Review Teradata Support added to Database Library
+In October 2019, we raised [Issue #122](https://github.com/franz-see/Robotframework-Database-Library/issues/122)
+to add support for Teradata 15 & 16 to Robot Framework Database Library.
+
+In November 2019, [Pull Request #124](https://github.com/franz-see/Robotframework-Database-Library/pull/124/) was created with the required additions to implement support for Teradata 15 & 16.
+The following changes were merged during December:
+* `.gitignore` (ignore `test/logs/` folder created by Teradata DevOps module)
+* `src/DatabaseLibrary/assertion.py` (Teradata SQL implementation using DBC)
+* `src/DatabaseLibrary/connection_manager.py` (Teradata specific port and connect method)
+* `test/Teradata_DB_Tests.robot` (new test suite for Teradata)
+### 6.3 Discuss the different methods of extending keywords
+The most obvious way of adding keywords is that you amend the Python library code.  This requires some developer skills
+but it is quite straightforward.  Packaging and distributing libraries is a little more challenging and you need to
+carefully consider what strategy use for deploying updates.  You will see many examples on GitHub if you search
+for GitHub repositories beginnning with "robotframework-".
+
+The simplest way to extend Robot Framework functionality is to [create user keywords](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords):
+
+> Keyword tables are used to create new higher-level keywords by combining existing keywords together.
+> These keywords are called user keywords to differentiate them from lowest level library keywords that
+> are implemented in test libraries. The syntax for creating user keywords is very close to the syntax for
+> creating test cases, which makes it easy to learn.
+
+User keywords can be created in test case files, resource files and test suite initialization files under the `*** Keywords ***` section.
+### 6.4 Different types of testing
+**Unit/Smoke Testing**\
+Unit testing or smoke testing is the most basic form of testing.  It is also the type testing that is generally the
+easiest to define.  Unit tests are typically small, simple and fast executing.  They are often used to perform
+technical quality assurance during the deployment process, or simple sanity checks for the developer.
+
+**Functional Testing**\
+Functional testing in the database domain normally involves performing more detailed analylsis.  For example,
+functional tests might analyse the Primary Key or Unique Index.  They can also identify orphaned Foreign Keys when
+there is no technical restriction implemented by the relational database.   In the database domain,
+functional tests normally require data (or at least one row) to be loaded into the tables being tested as
+it is not possible to perform functional testing on empty tables.
+
+Addtional keywords were added to support functional testing at OP and distributed via a common resource file:
+* `Verify Unique Index`
+* `Verify Unique Rows CTL_ID End Date`
+* `Verify Unique Rows CTL_ID`
+* `Verify Unique Rows Different CTL_ID`
+* `Verify Unique Rows CTL_ID End Date WITH WHERE`
+
+**Regression Testing**\
+It's important to check that each release does not break any existing features.
+In the database domain, regression testing will normally require a separate database environment.
+
+For each data source, it is necessary to define a standard set of data files that can be reloaded at any
+time into a clean environment in order to perform regression testing.  It should also be possible to perform
+a more complete regression test where files for many (or all) data sources are reloaded to check for any errors
+that may have been introduced with the latest changes.
 
 ## 7. Test Automation with Jenkins CI
 ### 7.1 Continuous Integration 101
@@ -312,6 +368,11 @@ Here is a brief description of [IBM InfoSphere DataStage](https://www.ibm.com/pr
 
 > Extract, transfer and load (ETL) data for enterprise applications in multicloud or hybrid environments,
 > supporting extended metadata management and big-data connectivity
+
+### 8.2 Robotic Process Automation
+
+
+### 8.3 Smart Data Loader
 
 
 ## 9. The future - what are we working on next @ OP?
