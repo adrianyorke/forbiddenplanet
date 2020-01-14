@@ -63,7 +63,7 @@ You really can teach an old dog new tricks!
 the London marathon!), carpentry & just being there for my daughter and helping her grow.
 ### 1.3 Robot Framework
 ![Robot Framework](src/images/rf.jpg)\
-Here's the introductory paragraph from robotframework.org:
+Introductory paragraph from robotframework.org:
 
 > “[Robot Framework](http://robotframework.org/) is a generic open source automation framework for acceptance testing,
 > acceptance test driven development (ATDD), and robotic process automation (RPA). It has easy-to-use tabular test data syntax
@@ -136,7 +136,7 @@ PEPs (Python Enhancement Proposals) are the mechanism for defining and discussin
 It is important to remember that [PEP 249](https://www.python.org/dev/peps/pep-0249/) is only a specification and does
 not define the technical implementation.
 ### 3.2 A brief introduction to DB-API2
-Here's the introductory paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
+Introductory paragraph from [PEP 249](https://www.python.org/dev/peps/pep-0249/) which defines Database API Specification v2.0:
 
 > “This API has been defined to encourage similarity between the Python modules that are used to access databases. By doing
 > this, we hope to achieve a consistency leading to more easily understood modules, code that is generally more portable
@@ -175,7 +175,7 @@ Despite this simplicity of design, SQLite is surprising feature rich and provide
 database and SQL. To understand appropriate uses for SQLite I recommend reviewing the comprehensive
 [summary](https://www.sqlite.org/whentouse.html) at sqlite.org.
 
-Here are the opening statements from the sqlite.org summary:
+Opening statements from the sqlite.org summary:
 
 > “SQLite is not directly comparable to client/server SQL database engines such as MySQL, Oracle, PostgreSQL, or SQL Server
 > since SQLite is trying to solve a different problem.
@@ -195,7 +195,7 @@ SQLite is available on all Python installations and one of the appropriate uses 
 Work through [SQLite test suite](test/SQLite3_DB_Tests.robot)
 and check our installation is working.
 
-Here is a summary of database library keywords which we will be covering in the
+Summary of database library keywords which we will be covering in the
 [SQLite test suite](test/SQLite3_DB_Tests.robot)
 in the order that they are used:
 * `Connect To Database Using Custom Params`
@@ -215,7 +215,7 @@ in the order that they are used:
 
 ## 5. Robot Framework Testing with PostgreSQL
 ![PostgreSQL](src/images/postgresql.jpg)\
-Here is the introductory paragraph from [PostgreSQL.org](https://www.postgresql.org/):
+Introductory paragraph from [PostgreSQL.org](https://www.postgresql.org/):
 
 > PostgreSQL is a powerful, open source object-relational database system
 > with over 30 years of active development that has earned it a strong reputation for reliability,
@@ -241,7 +241,7 @@ and check our installation is working.
 > Note: there is a slight modification to the default test suite.  I moved `Drop person and foobar tables` test case
 > to the beginning of the test suite so the data and tables persist between tests.
 
-Here is a summary of database library keywords which we will be covering in the
+Summary of database library keywords which we will be covering in the
 [PostgreSQL test suite](test/PostgreSQL_DB_Tests.robot)
 in the order that they are used:
 * `Connect To Database` (called by `Suite Setup` in `*** Settings ***`)
@@ -337,14 +337,14 @@ that may have been introduced with the latest changes.
 
 ## 7. Test Automation with Jenkins CI
 ### 7.1 Continuous Integration 101
-Here's a simple defintion from [ThoughtWorks](https://www.thoughtworks.com/continuous-integration):
+Simple defintion from [ThoughtWorks](https://www.thoughtworks.com/continuous-integration):
 
 > Continuous Integration (CI) is a development practice that requires developers to integrate code
 > into a shared repository several times a day. Each check-in is then verified by an automated build
 > [and automated tests], allowing teams to detect problems early.
 
-Here is what [Atlassian](https://www.atlassian.com/continuous-delivery/continuous-integration)
-has to say about Continuous Integration:
+A statement from [Atlassian](https://www.atlassian.com/continuous-delivery/continuous-integration)
+about Continuous Integration:
 
 > Continuous integration (CI) is the practice of automating the integration of code changes from multiple
 > contributors into a single software project. The CI process is comprised of automatic tools that assert
@@ -365,7 +365,7 @@ We run tests using Robot Framework which checks, for example, that internal stan
 In the event of an error the information is fed back via email and MS Teams.
 ### 7.2 Jenkins CI
 ![Jenkins](src/images/jenkins.jpg)\
-Here is the opening statement from the [wiki](https://en.wikipedia.org/wiki/Jenkins_(software)):
+Opening statement from the [wiki](https://en.wikipedia.org/wiki/Jenkins_(software)):
 
 > Jenkins is a free and open source automation server. Jenkins helps to automate the non-human
 > part of the software development process, with continuous integration and facilitating technical aspects
@@ -390,7 +390,7 @@ on the Continuous Integration server,  e.g. using Jenkins jobs.
 
 EDW Test Runner also handles authentication, environment switching, token replacement and log merging.
 
-Here's a list of the main command line arguments to give you some idea of the full functionality:
+Summary of the main command line arguments to give you some idea of the full functionality:
 * `--test_files` (test suite filter, e.g. "*.robot" or "*.py")
 * `--included_tags` (include specific tags, e.g. "smoke" to include smoke tests only)
 * `--excluded_tags` (exclude specific tags, e.g. "dataloaded" to exclude tests that require data to be loaded)
@@ -403,12 +403,12 @@ Here's a list of the main command line arguments to give you some idea of the fu
 ## 8. IBM InfoSphere® DataStage Library (in-house development @ OP)
 ### 8.1 IBM InfoSphere® DataStage
 ![IBM InfoSphere® DataStage](src/images/datastage.jpg)\
-Here is a brief description of [IBM InfoSphere® DataStage](https://www.ibm.com/products/infosphere-datastage):
+Brief description of [IBM InfoSphere® DataStage](https://www.ibm.com/products/infosphere-datastage):
 
 > Extract, transfer and load (ETL) data for enterprise applications in multicloud or hybrid environments,
 > supporting extended metadata management and big-data connectivity
 ### 8.2 Robotic Process Automation (RPA)
-Here's how robotframework.org introduces [RPA](https://robotframework.org/rpa/):
+Robotframework.org introduces [RPA](https://robotframework.org/rpa/):
 
 > Robot Framework is an open source robotic process automation (RPA) solution that is used
 > to automate business processes. It is open and extensible which means that it can be integrated with
@@ -546,7 +546,7 @@ It is also possible to trigger build and deploy processes via the REST API inter
 configurations to be defined, built, tested and deployed using contemporary DevOps CI/CD pipelines.
 ### 9.5 Kibana Dashboard Integration
 ![Kibana](src/images/kibana.jpg)\
-Here's the introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
+Introductory paragraph from the [Kibana wiki](https://en.wikipedia.org/wiki/Kibana):
 
 > “Kibana is an open source data visualization dashboard for Elasticsearch. It provides visualization capabilities on top
 > of the content indexed on an Elasticsearch cluster. Users can create bar, line and scatter plots, or pie charts and maps
@@ -566,7 +566,7 @@ acceptable to simply rerun all tests for each change or release and look for any
 per day so we need to focus our efforts in the right area rather than simply "blanket testing" each patch.
 This is something Machine Learning could really help with.
 
-Here's a reminder of the [definition of Machine Learning](https://expertsystem.com/machine-learning-definition/):
+Reminder of the [definition of Machine Learning](https://expertsystem.com/machine-learning-definition/):
 
 > “Machine learning is an application of artificial intelligence (AI) that provides systems the ability to automatically
 > learn and improve from experience without being explicitly programmed.”
