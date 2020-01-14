@@ -286,11 +286,6 @@ The following changes were merged during December:
 * `src/DatabaseLibrary/connection_manager.py` (Teradata specific port and connect method)
 * `test/Teradata_DB_Tests.robot` (new test suite for Teradata)
 ### 6.3 Discuss the different methods of extending keywords
-The most obvious way of adding keywords is that you amend the Python library code.  This requires some developer skills
-but it is quite straightforward.  Packaging and distributing libraries is a little more challenging and you need to
-carefully consider what strategy use for deploying updates.  You will see many examples on GitHub if you search
-for GitHub repositories beginnning with "robotframework-".
-
 The simplest way to extend Robot Framework functionality is to [create user keywords](https://robotframework.org/robotframework/latest/RobotFrameworkUserGuide.html#creating-user-keywords):
 
 > Keyword tables are used to create new higher-level keywords by combining existing keywords together.
@@ -298,7 +293,14 @@ The simplest way to extend Robot Framework functionality is to [create user keyw
 > are implemented in test libraries. The syntax for creating user keywords is very close to the syntax for
 > creating test cases, which makes it easy to learn.
 
-User keywords can be created in test case files, resource files and test suite initialization files under the `*** Keywords ***` section.
+User keywords can be created in test case files, resource files and test suite initialization files under
+a `*** Keywords ***` section.
+
+Another way of adding keywords is that you amend the Python library code.  This requires some developer skills
+but it is quite straightforward.  Packaging and distributing libraries is a little more challenging and you need to
+carefully consider what strategy use for deploying updates.  You will see many examples on GitHub if you search
+for GitHub repositories beginnning with "robotframework-".
+
 ### 6.4 Different types of testing
 **Unit/Smoke Testing**\
 Unit testing or smoke testing is the most basic form of testing.  It is also the type testing that is generally the
