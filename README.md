@@ -302,13 +302,18 @@ carefully consider what strategy use for deploying updates.  You will see many e
 for GitHub repositories beginnning with "robotframework-".
 
 ### 6.4 Different types of testing
+Martin Fowler summarised the different kinds of automated tests using what he calls the
+[Test Pyramid](https://martinfowler.com/bliki/TestPyramid.html).  In the database domain, Service Tests are
+broadly equivalent to Functional Tests.  UI tests would best be implemented by tests against what is known
+in Teradata world as the Access Layer (often abbreviated as AXS).
+
 **Unit/Smoke Testing**\
 Unit testing or smoke testing is the most basic form of testing.  It is also the type testing that is generally the
 easiest to define.  Unit tests are typically small, simple and fast executing.  They are often used to perform
 technical quality assurance during the deployment process, or simple sanity checks for the developer.
 
 **Functional Testing**\
-Functional testing in the database domain normally involves performing more detailed analylsis.  For example,
+Functional testing in the database domain normally involves performing more detailed analysis.  For example,
 functional tests might analyse the Primary Key or Unique Index.  They can also identify orphaned Foreign Keys when
 there is no technical restriction implemented by the relational database.   In the database domain,
 functional tests normally require data (or at least one row) to be loaded into the tables being tested as
