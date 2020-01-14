@@ -420,14 +420,16 @@ multiple technology stacks and architectures.  In the Smart Data Loader example 
 intelligent processing decisions based on Teradata Database state, DataStage state and File System state.
 ### 8.3 Smart Data Loader
 We needed a utility that could be used to load data more intelligently than simply running dumb shell scripts.  Shell scripts
-are fine for simple cases, where everything is perfect but this is rare.  If we are loading 1000 files at the 
+are fine for simple cases, where everything is perfect but that is rare.  If we are loading 1000 files at the 
 weekend or overnight when no human is monitoring, we did not want the data loading process to fail if the network
-was briefly unavailable.  The basic building blocks for Smart Data Loader include:
-* Teradata Database (Robot Framework library already developed internally)
-* DataStage (new Robot Framework library)
-* File System (basic keywords already available via [OperatingSystem](http://robotframework.org/robotframework/latest/libraries/OperatingSystem.html) Standard library)
+was briefly unavailable.
 
-In order to load data automatically and smartly into the data warehouse we required a number of additional
+The basic building blocks for Smart Data Loader include:
+* Teradata Database Lib (Robot Framework library already developed internally)
+* DataStage Lib (DataStage Robot Framework library developed internally)
+* File System Lib (basic keywords already available via [OperatingSystem](http://robotframework.org/robotframework/latest/libraries/OperatingSystem.html) Standard library)
+
+In order to load data automatically (and in a smart manner) into the data warehouse we required a number of additional
 keywords to automate state checks and state transitions in the database as the load process progresses.  These
 higher-level keywords were implemented using a resource file built on top of Teradata Database Library:
 * `Reset Business Date`
@@ -448,14 +450,18 @@ using DataStage.  The following additional higher-level keywords were implemente
 * `Reset And Run Job`
 * `Reset And Run Job With Parameters`
     
-The underlying DataStage Library is a simple class library using the `subprocess` Python library to interact with the
-operating system.  IBM provides a number of command line utilities that we can use to implement a Robot Framework
-library:
+The underlying Robot Framework DataStage Library is a simple class library using the `subprocess`
+Python standard library to interact with the operating system.
+
+IBM provides a number of command line
+utilities that we can use to implement a Robot Framework library to interact with DataStage:
 * [dsadmin](https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_9.1.0/com.ibm.swg.im.iis.ds.cliapi.ref.doc/topics/r_dsvjbref_Commands_for_Administering_WebSphere_DataStage.html)\
 There is a single command for administering projects, dsadmin. The command has a large range of options.
-* dsjob
+* [dsjob](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.ds.direct.doc/topics/t_ddesref_running_job_command_line.html)
+You can run the dsjob command to start jobs, stop jobs, set an alias for jobs, and access other functions.
 * [istool](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.iisinfsv.assetint.doc/topics/commandset.html)\
-You can use the istool commands to manage assets that are stored in the metadata repository of InfoSphere® Information Server.
+You can use the istool commands to manage assets that are stored in the metadata repository of
+InfoSphere® Information Server.
 
 
 ## 9. The future - what are we working on next @ OP?
