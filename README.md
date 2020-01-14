@@ -455,11 +455,11 @@ Python standard library to interact with the operating system.
 
 IBM provides a number of command line
 utilities that we can use to implement a Robot Framework library to interact with DataStage:
-* [dsadmin](https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_9.1.0/com.ibm.swg.im.iis.ds.cliapi.ref.doc/topics/r_dsvjbref_Commands_for_Administering_WebSphere_DataStage.html)\
+* [dsadmin](https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_9.1.0/com.ibm.swg.im.iis.ds.cliapi.ref.doc/topics/r_dsvjbref_Commands_for_Administering_WebSphere_DataStage.html)
 There is a single command for administering projects, dsadmin. The command has a large range of options.
 * [dsjob](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.ds.direct.doc/topics/t_ddesref_running_job_command_line.html)
 You can run the dsjob command to start jobs, stop jobs, set an alias for jobs, and access other functions.
-* [istool](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.iisinfsv.assetint.doc/topics/commandset.html)\
+* [istool](https://www.ibm.com/support/knowledgecenter/SSZJPZ_11.7.0/com.ibm.swg.im.iis.iisinfsv.assetint.doc/topics/commandset.html)
 You can use the istool commands to manage assets that are stored in the metadata repository of
 InfoSphere® Information Server.
 
